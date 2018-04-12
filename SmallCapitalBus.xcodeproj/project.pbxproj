@@ -15,6 +15,10 @@
 		1A72A8B52047A4DE0091F460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A72A8B42047A4DE0091F460 /* Assets.xcassets */; };
 		1A72A8B82047A4DE0091F460 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A72A8B62047A4DE0091F460 /* LaunchScreen.storyboard */; };
 		1A72A8BB2047A4DE0091F460 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72A8BA2047A4DE0091F460 /* main.m */; };
+		1AC5DE7E207EFECB00DC9193 /* DuDuSerInfoViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5DE7D207EFECB00DC9193 /* DuDuSerInfoViewController.m */; };
+		1AC5DE80207EFF0400DC9193 /* DuDuSerSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC5DE7F207EFF0400DC9193 /* DuDuSerSB.storyboard */; };
+		1AC5DE88207F331700DC9193 /* StartSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1AC5DE87207F331700DC9193 /* StartSB.storyboard */; };
+		1AC5DE8B207F383500DC9193 /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5DE8A207F383500DC9193 /* SignViewController.m */; };
 		1ADD3069207C61BD0039C1B5 /* SecondViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD3068207C61BD0039C1B5 /* SecondViewTableViewCell.m */; };
 		1ADD306F207C9DF40039C1B5 /* FirstViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD306E207C9DF40039C1B5 /* FirstViewTableViewCell.m */; };
 		5726E56C4B0BEA5C72AD0CE0 /* libPods-SmallCapitalBus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 558C8ED3DF9DC7884BB693AE /* libPods-SmallCapitalBus.a */; };
@@ -34,6 +38,13 @@
 		1A72A8B72047A4DE0091F460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A72A8B92047A4DE0091F460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A72A8BA2047A4DE0091F460 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1AC5DE7C207EFECB00DC9193 /* DuDuSerInfoViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuDuSerInfoViewController.h; sourceTree = "<group>"; };
+		1AC5DE7D207EFECB00DC9193 /* DuDuSerInfoViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuDuSerInfoViewController.m; sourceTree = "<group>"; };
+		1AC5DE7F207EFF0400DC9193 /* DuDuSerSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DuDuSerSB.storyboard; sourceTree = "<group>"; };
+		1AC5DE82207F00E500DC9193 /* SmallCapitalBus-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "SmallCapitalBus-Prefix.pch"; sourceTree = "<group>"; };
+		1AC5DE87207F331700DC9193 /* StartSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = StartSB.storyboard; sourceTree = "<group>"; };
+		1AC5DE89207F383500DC9193 /* SignViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SignViewController.h; sourceTree = "<group>"; };
+		1AC5DE8A207F383500DC9193 /* SignViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SignViewController.m; sourceTree = "<group>"; };
 		1ADD3067207C61BD0039C1B5 /* SecondViewTableViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SecondViewTableViewCell.h; sourceTree = "<group>"; };
 		1ADD3068207C61BD0039C1B5 /* SecondViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewTableViewCell.m; sourceTree = "<group>"; };
 		1ADD306D207C9DF40039C1B5 /* FirstViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewTableViewCell.h; sourceTree = "<group>"; };
@@ -67,6 +78,7 @@
 		1A532E8F207B696E0048B70C /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				1AC5DE83207F31AF00DC9193 /* Login */,
 				1ADD306A207C9CA20039C1B5 /* DuDuService */,
 				1ADD305C207C5B060039C1B5 /* MyAbout */,
 			);
@@ -94,6 +106,7 @@
 		1A72A8A72047A4DE0091F460 /* SmallCapitalBus */ = {
 			isa = PBXGroup;
 			children = (
+				1AC5DE81207F009100DC9193 /* Support Files */,
 				1A532E8F207B696E0048B70C /* Class */,
 				1A72A8A82047A4DE0091F460 /* AppDelegate.h */,
 				1A72A8A92047A4DE0091F460 /* AppDelegate.m */,
@@ -104,6 +117,32 @@
 				1A72A8BA2047A4DE0091F460 /* main.m */,
 			);
 			path = SmallCapitalBus;
+			sourceTree = "<group>";
+		};
+		1AC5DE81207F009100DC9193 /* Support Files */ = {
+			isa = PBXGroup;
+			children = (
+				1AC5DE82207F00E500DC9193 /* SmallCapitalBus-Prefix.pch */,
+			);
+			name = "Support Files";
+			sourceTree = "<group>";
+		};
+		1AC5DE83207F31AF00DC9193 /* Login */ = {
+			isa = PBXGroup;
+			children = (
+				1AC5DE86207F321900DC9193 /* Controller */,
+				1AC5DE87207F331700DC9193 /* StartSB.storyboard */,
+			);
+			path = Login;
+			sourceTree = "<group>";
+		};
+		1AC5DE86207F321900DC9193 /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				1AC5DE89207F383500DC9193 /* SignViewController.h */,
+				1AC5DE8A207F383500DC9193 /* SignViewController.m */,
+			);
+			name = Controller;
 			sourceTree = "<group>";
 		};
 		1ADD305C207C5B060039C1B5 /* MyAbout */ = {
@@ -139,6 +178,7 @@
 			children = (
 				1ADD306C207C9CC90039C1B5 /* View */,
 				1ADD306B207C9CBD0039C1B5 /* Controller */,
+				1AC5DE7F207EFF0400DC9193 /* DuDuSerSB.storyboard */,
 			);
 			path = DuDuService;
 			sourceTree = "<group>";
@@ -148,6 +188,8 @@
 			children = (
 				1A72A8AB2047A4DE0091F460 /* FirstViewController.h */,
 				1A72A8AC2047A4DE0091F460 /* FirstViewController.m */,
+				1AC5DE7C207EFECB00DC9193 /* DuDuSerInfoViewController.h */,
+				1AC5DE7D207EFECB00DC9193 /* DuDuSerInfoViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -230,9 +272,11 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				1AC5DE80207EFF0400DC9193 /* DuDuSerSB.storyboard in Resources */,
 				1A72A8B82047A4DE0091F460 /* LaunchScreen.storyboard in Resources */,
 				1A72A8B52047A4DE0091F460 /* Assets.xcassets in Resources */,
 				1A72A8B32047A4DE0091F460 /* Main.storyboard in Resources */,
+				1AC5DE88207F331700DC9193 /* StartSB.storyboard in Resources */,
 				1A532E91207B6B660048B70C /* SecondSB.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -280,7 +324,9 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SmallCapitalBus/Pods-SmallCapitalBus-resources.sh",
-				$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle,
+				"${PODS_ROOT}/AMap3DMap/MAMapKit.framework/AMap.bundle",
+				"${PODS_ROOT}/IQKeyboardManager/IQKeyboardManager/Resources/IQKeyboardManager.bundle",
+				"$PODS_CONFIGURATION_BUILD_DIR/MWPhotoBrowser/MWPhotoBrowser.bundle",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputPaths = (
@@ -301,9 +347,11 @@
 				1ADD3069207C61BD0039C1B5 /* SecondViewTableViewCell.m in Sources */,
 				1A72A8B02047A4DE0091F460 /* SecondViewController.m in Sources */,
 				1A72A8AA2047A4DE0091F460 /* AppDelegate.m in Sources */,
+				1AC5DE7E207EFECB00DC9193 /* DuDuSerInfoViewController.m in Sources */,
 				1A72A8BB2047A4DE0091F460 /* main.m in Sources */,
 				1A72A8AD2047A4DE0091F460 /* FirstViewController.m in Sources */,
 				1ADD306F207C9DF40039C1B5 /* FirstViewTableViewCell.m in Sources */,
+				1AC5DE8B207F383500DC9193 /* SignViewController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -440,6 +488,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VB8H46N7M3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SmallCapitalBus/SmallCapitalBus-Prefix.pch";
 				INFOPLIST_FILE = SmallCapitalBus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
@@ -456,6 +505,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VB8H46N7M3;
+				GCC_PREFIX_HEADER = "$(SRCROOT)/SmallCapitalBus/SmallCapitalBus-Prefix.pch";
 				INFOPLIST_FILE = SmallCapitalBus/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";

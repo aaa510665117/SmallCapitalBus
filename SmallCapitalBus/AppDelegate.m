@@ -7,6 +7,7 @@
 //
 
 #import "AppDelegate.h"
+#import "SignViewController.h"
 
 @interface AppDelegate ()
 
@@ -17,6 +18,14 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
+    
+    UINavigationController *navController = [[UINavigationController alloc] init];
+    SignViewController *startViewController = [[SignViewController alloc]init];
+    [navController pushViewController:startViewController animated:NO];
+    
+    // create naviagtion container
+    self.window.rootViewController = navController;
+    
     return YES;
 }
 
@@ -47,5 +56,9 @@
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
 }
 
++ (AppDelegate *)appDelegate
+{
+    return (AppDelegate *)[UIApplication sharedApplication].delegate;
+}
 
 @end

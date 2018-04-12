@@ -8,6 +8,7 @@
 
 #import "FirstViewController.h"
 #import "FirstViewTableViewCell.h"
+#import "DuDuSerInfoViewController.h"
 
 @interface FirstViewController ()
 
@@ -51,13 +52,17 @@
 {
     static NSString *CellIdentifier = @"FirstViewTableViewCell";
     FirstViewTableViewCell *cell = (FirstViewTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-
+    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    DuDuSerInfoViewController * duduSerInfo = [[DuDuSerInfoViewController alloc]init];
+    duduSerInfo.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:duduSerInfo animated:YES];
 }
 
 - (void)didReceiveMemoryWarning {

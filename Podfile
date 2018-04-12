@@ -6,8 +6,12 @@
 target ‘SmallCapitalBus' do
 
   inhibit_all_warnings!
+  pod 'IQKeyboardManager'
   pod 'SDWebImage','~> 3.8.1'
   pod 'MWPhotoBrowser'
+  pod 'AMap3DMap'
+  pod 'AMapLocation'
+  pod 'AMapSearch','~> 4.1.0'
 
 end
 

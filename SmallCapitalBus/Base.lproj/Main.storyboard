@@ -33,10 +33,10 @@
             <objects>
                 <navigationController id="Tk6-T0-302" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="我的" image="second" id="ue8-QJ-bKe"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="CSr-GY-fom">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="CSr-GY-fom">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="zNa-bR-mIK" kind="relationship" relationship="rootViewController" id="1dn-zt-0BG"/>
@@ -114,17 +114,18 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj5-b8-raA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="1464.8" y="384.55772113943033"/>
+            <point key="canvasLocation" x="1454" y="385"/>
         </scene>
         <!--督督列表-->
         <scene sceneID="q9Y-8k-wXT">
             <objects>
                 <navigationController id="cEB-U3-VPn" sceneMemberID="viewController">
                     <tabBarItem key="tabBarItem" title="督督列表" image="first" id="4Ni-G9-HAN"/>
-                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="zU0-tc-YgX">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="zU0-tc-YgX">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
-                        <color key="backgroundColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
                         <segue destination="tdb-IN-3C7" kind="relationship" relationship="rootViewController" id="3bu-ZI-eTc"/>
@@ -145,6 +146,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="ujB-2i-BHk">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <color key="sectionIndexBackgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="FirstViewTableViewCell" rowHeight="95" id="vGu-Vy-eTq" customClass="FirstViewTableViewCell">
                                         <rect key="frame" x="0.0" y="28" width="375" height="95"/>
