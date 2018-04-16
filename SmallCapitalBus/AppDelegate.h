@@ -7,10 +7,16 @@
 //
 
 #import <UIKit/UIKit.h>
+#import "UserProfile.h"
+#import "LKDBHelper.h"
 
 @interface AppDelegate : UIResponder <UIApplicationDelegate>
 
 @property (strong, nonatomic) UIWindow *window;
+
+@property (nonatomic, strong) UserProfile * userProfile;                        //用户信息
+@property (nonatomic, strong) LKDBHelper * dbManager;                           //FMDB
+
 
 + (AppDelegate *)appDelegate;
 

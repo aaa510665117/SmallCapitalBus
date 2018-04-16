@@ -10,6 +10,13 @@
 #define SmallCapitalBus_Prefix_pch
 
 #import "AppDelegate.h"
+#import "HttpConfig.h"
+#import "ZYDataBaseManager.h"
+#import "AFNetworking.h"
+#import "Definition.h"
+
+#import "NSString+FilePath.h"
+#import "UIColor+APPColor.h"
 
 // Include any system framework and library headers here that should be included in all compilation units.
 // You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
