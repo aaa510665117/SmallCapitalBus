@@ -19,12 +19,8 @@
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     // Override point for customization after application launch.
     
-    UINavigationController *navController = [[UINavigationController alloc] init];
-    SignViewController *startViewController = [[SignViewController alloc]init];
-    [navController pushViewController:startViewController animated:NO];
-    
-    // create naviagtion container
-    self.window.rootViewController = navController;
+    //登录
+    [self showLoginNav];
     
     return YES;
 }
@@ -54,6 +50,24 @@
 
 - (void)applicationWillTerminate:(UIApplication *)application {
     // Called when the application is about to terminate. Save data if appropriate. See also applicationDidEnterBackground:.
+}
+
+//主TabBar
+-(void)showMainTabNav
+{
+    UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
+    [AppDelegate appDelegate].window.rootViewController=[storyBoard instantiateInitialViewController];
+}
+
+//登录与注册
+-(void)showLoginNav
+{
+    UINavigationController *navController = [[UINavigationController alloc] init];
+    SignViewController *startViewController = [[SignViewController alloc]init];
+    [navController pushViewController:startViewController animated:NO];
+    
+    // create naviagtion container
+    self.window.rootViewController = navController;
 }
 
 + (AppDelegate *)appDelegate

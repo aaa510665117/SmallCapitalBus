@@ -61,8 +61,7 @@
 
 - (IBAction)clickSignBtn:(id)sender {
     //点击登录
-    UIStoryboard *storyBoard=[UIStoryboard storyboardWithName:@"Main" bundle:nil];
-    [AppDelegate appDelegate].window.rootViewController=[storyBoard instantiateInitialViewController];
+    [[AppDelegate appDelegate] showMainTabNav];
 }
 
 - (void)didReceiveMemoryWarning {

@@ -21,7 +21,7 @@ static LKDBHelper* db;
         {
             db = [[LKDBHelper alloc]initWithDBPath:[NSString stringWithFormat:@"%@/%@/%@.db",[NSString documentDirectory],dbName,dbName]];
             //加密
-            [db setKey:@"admin"];//key可以是随意字符串
+//            [db setKey:@"admin"];//key可以是随意字符串
         }
     }
     return db;

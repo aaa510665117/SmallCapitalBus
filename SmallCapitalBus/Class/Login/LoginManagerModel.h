@@ -9,5 +9,12 @@
 #import <Foundation/Foundation.h>
 
 @interface LoginManagerModel : NSObject
+{
+    UserProfile *userProfile;       // 个人用户的Profile
+    NSThread * loginThread;         // 登录线程
+}
+
+// 登录服务器
+- (void)loginServer;
 
 @end
