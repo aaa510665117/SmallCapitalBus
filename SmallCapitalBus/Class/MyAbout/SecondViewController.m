@@ -7,9 +7,13 @@
 //
 
 #import "SecondViewController.h"
+#import "SettingViewController.h"
 
 @interface SecondViewController ()
-
+{
+    NSArray * titleAry;
+    NSArray * imgAry;
+}
 @end
 
 @implementation SecondViewController
@@ -17,6 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    titleAry = @[@"个人信息",@"段位信息",@"设置"];
+    imgAry = @[@"reservation_person",@"reservation_order_service_name",@"password_icon_image"];
 }
 
 #pragma mark - Table view data source
@@ -49,7 +55,16 @@
 -(UIView *)tableView:(UITableView *)tableView viewForHeaderInSection:(NSInteger)section
 {
     UIView * darkView = [[UIView alloc]initWithFrame:CGRectMake(0, 0, [UIScreen mainScreen].bounds.size.width, 200)];
-    darkView.backgroundColor = [UIColor greenColor];
+    darkView.backgroundColor = [UIColor grayColor];
+    UIImageView * imageV = [[UIImageView alloc]init];
+    imageV.translatesAutoresizingMaskIntoConstraints = NO;
+    imageV.image = [UIImage imageNamed:@"backImage"];
+    [darkView addSubview:imageV];
+    [imageV mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(darkView.mas_centerY);
+        make.centerX.equalTo(darkView.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake([UIScreen mainScreen].bounds.size.width, 200));
+    }];
     return darkView;
 }
 
@@ -57,31 +72,36 @@
 {
     static NSString *CellIdentifier = @"SecondViewTableViewCell";
     SecondViewTableViewCell *cell = (SecondViewTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    switch (indexPath.row) {
-        case 0:
-        {
-            cell.cellLabel.text = @"个人信息";
-        }
-            break;
-        case 1:
-        {
-            cell.cellLabel.text = @"段位信息";
-        }
-            break;
-        case 2:
-        {
-            cell.cellLabel.text = @"设置";
-        }
-            break;
-        default:
-            break;
-    }
+    cell.cellLabel.text = [titleAry objectAtIndex:indexPath.row];
+    cell.cellImg.image = [UIImage imageNamed:[imgAry objectAtIndex:indexPath.row]];
     return cell;
 }
 
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    switch (indexPath.row) {
+        case 0:
+        {
+            
+        }
+            break;
+        case 1:
+        {
+            
+        }
+            break;
+        case 2:
+        {
+            //设置
+            SettingViewController * setView = [[SettingViewController alloc]init];
+            setView.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:setView animated:YES];
+        }
+            break;
+        default:
+            break;
+    }
 }
 
 - (void)didReceiveMemoryWarning {

@@ -36,6 +36,7 @@
                     <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" translucent="NO" id="CSr-GY-fom">
                         <rect key="frame" x="0.0" y="20" width="375" height="44"/>
                         <autoresizingMask key="autoresizingMask"/>
+                        <color key="tintColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <color key="barTintColor" red="0.93725490199999995" green="0.93725490199999995" blue="0.95686274510000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     </navigationBar>
                     <connections>
@@ -66,15 +67,14 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="tyL-DQ-Z0c">
-                                                    <rect key="frame" x="20" y="22" width="20" height="20"/>
-                                                    <color key="backgroundColor" red="0.6707678896" green="0.92456125469999995" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                    <rect key="frame" x="20" y="21" width="22" height="22"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="height" constant="20" id="Zy8-4r-emm"/>
-                                                        <constraint firstAttribute="width" constant="20" id="wUC-sc-Mm1"/>
+                                                        <constraint firstAttribute="height" constant="22" id="Zy8-4r-emm"/>
+                                                        <constraint firstAttribute="width" constant="22" id="wUC-sc-Mm1"/>
                                                     </constraints>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="我的信息" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ojh-Zy-3hA">
-                                                    <rect key="frame" x="55" y="23" width="61.5" height="18"/>
+                                                    <rect key="frame" x="57" y="23" width="61.5" height="18"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>

@@ -17,6 +17,7 @@ target ‘SmallCapitalBus' do
   pod 'AMapLocation'
   pod 'AMapSearch','~> 4.1.0'
   pod 'SVProgressHUD'
+  pod 'Masonry'
 
 end
 

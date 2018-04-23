@@ -11,6 +11,8 @@
 		1A0C27CF2085928E0036C462 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C27CE2085928E0036C462 /* UserInfoManager.m */; };
 		1A0C27D2208592FA0036C462 /* UserProfileTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C27D0208592FA0036C462 /* UserProfileTable.m */; };
 		1A0C27D5208593CB0036C462 /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C27D4208593CB0036C462 /* NSObject+ObjectMap.m */; };
+		1A1E75D2208D7C83006B8A19 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E75D1208D7C83006B8A19 /* SettingViewController.m */; };
+		1A1E75D5208D7ED1006B8A19 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E75D4208D7ED1006B8A19 /* SettingTableViewCell.m */; };
 		1A532E91207B6B660048B70C /* SecondSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A532E90207B6B660048B70C /* SecondSB.storyboard */; };
 		1A72A8AA2047A4DE0091F460 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72A8A92047A4DE0091F460 /* AppDelegate.m */; };
 		1A72A8AD2047A4DE0091F460 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72A8AC2047A4DE0091F460 /* FirstViewController.m */; };
@@ -43,6 +45,10 @@
 		1A0C27D1208592FA0036C462 /* UserProfileTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileTable.h; sourceTree = "<group>"; };
 		1A0C27D3208593CB0036C462 /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
 		1A0C27D4208593CB0036C462 /* NSObject+ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectMap.m"; sourceTree = "<group>"; };
+		1A1E75D0208D7C83006B8A19 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
+		1A1E75D1208D7C83006B8A19 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
+		1A1E75D3208D7ED1006B8A19 /* SettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
+		1A1E75D4208D7ED1006B8A19 /* SettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
 		1A532E90207B6B660048B70C /* SecondSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondSB.storyboard; sourceTree = "<group>"; };
 		1A72A8A52047A4DE0091F460 /* SmallCapitalBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallCapitalBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A72A8A82047A4DE0091F460 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -270,6 +276,8 @@
 			children = (
 				1A72A8AE2047A4DE0091F460 /* SecondViewController.h */,
 				1A72A8AF2047A4DE0091F460 /* SecondViewController.m */,
+				1A1E75D0208D7C83006B8A19 /* SettingViewController.h */,
+				1A1E75D1208D7C83006B8A19 /* SettingViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -279,6 +287,8 @@
 			children = (
 				1ADD3067207C61BD0039C1B5 /* SecondViewTableViewCell.h */,
 				1ADD3068207C61BD0039C1B5 /* SecondViewTableViewCell.m */,
+				1A1E75D3208D7ED1006B8A19 /* SettingTableViewCell.h */,
+				1A1E75D4208D7ED1006B8A19 /* SettingTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -464,7 +474,9 @@
 				1A72A8B02047A4DE0091F460 /* SecondViewController.m in Sources */,
 				1A0C27D2208592FA0036C462 /* UserProfileTable.m in Sources */,
 				1A72A8AA2047A4DE0091F460 /* AppDelegate.m in Sources */,
+				1A1E75D2208D7C83006B8A19 /* SettingViewController.m in Sources */,
 				1AA517AD20847A4000B1B5D3 /* UserProfile.m in Sources */,
+				1A1E75D5208D7ED1006B8A19 /* SettingTableViewCell.m in Sources */,
 				1AC5DE7E207EFECB00DC9193 /* DuDuSerInfoViewController.m in Sources */,
 				1AA517BF208498DD00B1B5D3 /* UIColor+APPColor.m in Sources */,
 				1AA517B320848C0C00B1B5D3 /* ZYDataBaseManager.m in Sources */,
