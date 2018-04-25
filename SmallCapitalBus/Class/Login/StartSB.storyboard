@@ -141,7 +141,7 @@
                                                     <constraint firstItem="mNZ-Su-P3h" firstAttribute="top" secondItem="x5t-hq-AhU" secondAttribute="top" id="qo5-pm-gQT"/>
                                                 </constraints>
                                             </view>
-                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="loginLogo" translatesAutoresizingMaskIntoConstraints="NO" id="inS-iO-LHy">
+                                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="backImage" translatesAutoresizingMaskIntoConstraints="NO" id="inS-iO-LHy">
                                                 <rect key="frame" x="0.0" y="0.0" width="375" height="211"/>
                                                 <color key="backgroundColor" red="0.1960784314" green="0.75686274509999996" blue="0.47450980390000003" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -223,7 +223,7 @@
         </scene>
     </scenes>
     <resources>
-        <image name="loginLogo" width="16" height="16"/>
+        <image name="backImage" width="320" height="160"/>
         <image name="regist_image_person" width="21" height="21"/>
         <image name="regist_image_vcode" width="21" height="21"/>
     </resources>

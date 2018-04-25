@@ -149,9 +149,8 @@
     // 清理用户信息
     [self resetUserProfile];
     
-//    // 取消所有网络请求
-//    [[SEHttpAPI sharedUpDownAPI] canelRequestAll];
-//    [[SEUpDownAPI sharedManager] canelRequestAll];
+    // 取消所有网络请求
+    [[ZYHttpAPI sharedUpDownAPI] canelRequestAll];
     
     // 回到主线程处理UI的逻辑
     [self performSelectorOnMainThread:@selector(finishResetUserID) withObject:nil waitUntilDone:NO];
@@ -160,13 +159,8 @@
 // 回到主线程处理UI的逻辑
 - (void)finishResetUserID
 {
-//    // 弹出TabBarController中的view弹出
-//    // Release Main Tabbar
-//    [[AppDelegate appDelegate].mainTabController.view removeFromSuperview];
-//    [AppDelegate appDelegate].mainTabController = nil;
-//
-//    // 返回登陆界面
-//    [[AppDelegate appDelegate] createStartNavigator];
+    // 返回登陆界面
+    [[AppDelegate appDelegate] showLoginNav];
 }
 
 // Reset user account

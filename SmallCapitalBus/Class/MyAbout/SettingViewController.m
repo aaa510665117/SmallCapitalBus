@@ -103,7 +103,7 @@
 -(void)clickOutBtn
 {
     //点击退出登录
-    [[AppDelegate appDelegate] showLoginNav];
+    [[AppDelegate appDelegate].userProfile resetUserIDThread];
 }
 
 - (void)didReceiveMemoryWarning {

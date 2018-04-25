@@ -15,6 +15,6 @@
 }
 
 // 登录服务器
-- (void)loginServer;
+- (void)loginVerify:(NSString *)pin;
 
 @end

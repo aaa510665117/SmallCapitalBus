@@ -10,26 +10,26 @@
 
 @implementation LoginManagerModel
 
--(void)loginServer
+- (void)loginVerify:(NSString *)pin
 {
-    // 网络通并且PushSession存在，获取Push通知并处理
-    if (kNetworkNotReachability)
-    {
-        [ToolsFunction showPromptViewWithString:@"无法连接网络，请检查你的数据网络连接。" background:nil timeDuration:1];
-        return;
-    }
+//    // 网络通并且PushSession存在，获取Push通知并处理
+//    if (kNetworkNotReachability)
+//    {
+//        [ToolsFunction showPromptViewWithString:@"无法连接网络，请检查你的数据网络连接。" background:nil timeDuration:1];
+//        return;
+//    }
     
     //进行登录
     NSMutableDictionary * httpDic = [[NSMutableDictionary alloc]init];
     [httpDic setValue:[AppDelegate appDelegate].userProfile.userAccountNumber forKey:@"un"];
-    [httpDic setValue:[AppDelegate appDelegate].userProfile.userPassword forKey:@"pw"];
+    [httpDic setValue:pin forKey:@"pin"];
     [httpDic setValue:[AppDelegate appDelegate].userProfile.deviceToken forKey:@"mid"];
     [httpDic setValue:[NSString stringWithFormat:@"%d",PUSH_SERVER_APNS] forKey:@"pushsvc"];
     [httpDic setValue:@"2" forKey:@"ct"];
     
     [ToolsFunction showHttpPromptView:nil];
     
-    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"login.php" withParams:httpDic withSuccess:^(NSDictionary *success) {
+    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"login_note_verify.php" withParams:httpDic withSuccess:^(NSDictionary *success) {
         
         [ToolsFunction hideHttpPromptView:nil];
         
@@ -70,7 +70,7 @@
         }
         else
         {
-            [ZYHttpAPI analysisErrorCode:success withRequestAdd:@"login.php"];
+            [ZYHttpAPI analysisErrorCode:success withRequestAdd:@"login_note_verify.php"];
         }
         
     } withFailure:^(NSDictionary *failure) {

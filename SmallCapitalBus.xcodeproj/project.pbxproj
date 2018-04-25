@@ -49,6 +49,7 @@
 		1A1E75D1208D7C83006B8A19 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		1A1E75D3208D7ED1006B8A19 /* SettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
 		1A1E75D4208D7ED1006B8A19 /* SettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
+		1A4A698A2090639F003686C0 /* SmallCapitalBus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmallCapitalBus.entitlements; sourceTree = "<group>"; };
 		1A532E90207B6B660048B70C /* SecondSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondSB.storyboard; sourceTree = "<group>"; };
 		1A72A8A52047A4DE0091F460 /* SmallCapitalBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallCapitalBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A72A8A82047A4DE0091F460 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -145,6 +146,7 @@
 		1A72A8A72047A4DE0091F460 /* SmallCapitalBus */ = {
 			isa = PBXGroup;
 			children = (
+				1A4A698A2090639F003686C0 /* SmallCapitalBus.entitlements */,
 				1AC5DE81207F009100DC9193 /* Support Files */,
 				1A532E8F207B696E0048B70C /* Class */,
 				1A72A8A82047A4DE0091F460 /* AppDelegate.h */,
@@ -366,6 +368,11 @@
 					1A72A8A42047A4DE0091F460 = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.Push = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -620,6 +627,7 @@
 			baseConfigurationReference = 25324FD2C3B78F3AF0B80119 /* Pods-SmallCapitalBus.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmallCapitalBus/SmallCapitalBus.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VB8H46N7M3;
@@ -639,6 +647,7 @@
 			baseConfigurationReference = AC06030D21CC4058DEA280A4 /* Pods-SmallCapitalBus.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SmallCapitalBus/SmallCapitalBus.entitlements;
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = VB8H46N7M3;
