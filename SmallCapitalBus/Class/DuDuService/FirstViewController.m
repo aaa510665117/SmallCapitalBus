@@ -9,6 +9,7 @@
 #import "FirstViewController.h"
 #import "FirstViewTableViewCell.h"
 #import "DuDuSerInfoViewController.h"
+#import "MesListViewController.h"
 
 @interface FirstViewController ()
 
@@ -19,6 +20,16 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
+    //我的消息按钮
+    UIBarButtonItem * todayGoodMes = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"benefit_message"] style:UIBarButtonItemStylePlain target:self action:@selector(clickMesList)];
+    self.navigationItem.rightBarButtonItem = todayGoodMes;
+}
+
+-(void)clickMesList
+{
+    MesListViewController * mesList = [[MesListViewController alloc]init];
+    mesList.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:mesList animated:YES];
 }
 
 #pragma mark - Table view data source

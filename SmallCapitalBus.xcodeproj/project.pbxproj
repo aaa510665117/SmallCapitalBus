@@ -21,6 +21,11 @@
 		1A72A8B52047A4DE0091F460 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 1A72A8B42047A4DE0091F460 /* Assets.xcassets */; };
 		1A72A8B82047A4DE0091F460 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A72A8B62047A4DE0091F460 /* LaunchScreen.storyboard */; };
 		1A72A8BB2047A4DE0091F460 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72A8BA2047A4DE0091F460 /* main.m */; };
+		1A7C117320A57B31009108BD /* MesListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7C117220A57B31009108BD /* MesListViewController.m */; };
+		1A7C117620A57F2A009108BD /* MesListTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7C117520A57F2A009108BD /* MesListTableViewCell.m */; };
+		1A7C117B20A5839D009108BD /* GroupMeetAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7C117820A5839C009108BD /* GroupMeetAlertView.xib */; };
+		1A7C117C20A5839D009108BD /* GroupMeetAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7C117920A5839C009108BD /* GroupMeetAlertView.m */; };
+		1A7C118020A5861E009108BD /* MesListObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7C117F20A5861E009108BD /* MesListObj.m */; };
 		1AA517A82084791E00B1B5D3 /* LoginManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA517A72084791E00B1B5D3 /* LoginManagerModel.m */; };
 		1AA517AD20847A4000B1B5D3 /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA517AC20847A4000B1B5D3 /* UserProfile.m */; };
 		1AA517B320848C0C00B1B5D3 /* ZYDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA517B220848C0C00B1B5D3 /* ZYDataBaseManager.m */; };
@@ -63,6 +68,15 @@
 		1A72A8B72047A4DE0091F460 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		1A72A8B92047A4DE0091F460 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		1A72A8BA2047A4DE0091F460 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
+		1A7C117120A57B31009108BD /* MesListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MesListViewController.h; sourceTree = "<group>"; };
+		1A7C117220A57B31009108BD /* MesListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MesListViewController.m; sourceTree = "<group>"; };
+		1A7C117420A57F2A009108BD /* MesListTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MesListTableViewCell.h; sourceTree = "<group>"; };
+		1A7C117520A57F2A009108BD /* MesListTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MesListTableViewCell.m; sourceTree = "<group>"; };
+		1A7C117820A5839C009108BD /* GroupMeetAlertView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = GroupMeetAlertView.xib; sourceTree = "<group>"; };
+		1A7C117920A5839C009108BD /* GroupMeetAlertView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = GroupMeetAlertView.m; sourceTree = "<group>"; };
+		1A7C117A20A5839D009108BD /* GroupMeetAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupMeetAlertView.h; sourceTree = "<group>"; };
+		1A7C117E20A5861E009108BD /* MesListObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MesListObj.h; sourceTree = "<group>"; };
+		1A7C117F20A5861E009108BD /* MesListObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MesListObj.m; sourceTree = "<group>"; };
 		1AA517A62084791E00B1B5D3 /* LoginManagerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginManagerModel.h; sourceTree = "<group>"; };
 		1AA517A72084791E00B1B5D3 /* LoginManagerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginManagerModel.m; sourceTree = "<group>"; };
 		1AA517AB20847A4000B1B5D3 /* UserProfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProfile.h; sourceTree = "<group>"; };
@@ -117,6 +131,7 @@
 		1A532E8F207B696E0048B70C /* Class */ = {
 			isa = PBXGroup;
 			children = (
+				1A7C117720A58365009108BD /* Unility */,
 				1AA517A9208479C700B1B5D3 /* Module */,
 				1AC5DE83207F31AF00DC9193 /* Login */,
 				1ADD306A207C9CA20039C1B5 /* DuDuService */,
@@ -158,6 +173,25 @@
 				1A72A8BA2047A4DE0091F460 /* main.m */,
 			);
 			path = SmallCapitalBus;
+			sourceTree = "<group>";
+		};
+		1A7C117720A58365009108BD /* Unility */ = {
+			isa = PBXGroup;
+			children = (
+				1A7C117A20A5839D009108BD /* GroupMeetAlertView.h */,
+				1A7C117920A5839C009108BD /* GroupMeetAlertView.m */,
+				1A7C117820A5839C009108BD /* GroupMeetAlertView.xib */,
+			);
+			path = Unility;
+			sourceTree = "<group>";
+		};
+		1A7C117D20A585F8009108BD /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				1A7C117E20A5861E009108BD /* MesListObj.h */,
+				1A7C117F20A5861E009108BD /* MesListObj.m */,
+			);
+			name = Model;
 			sourceTree = "<group>";
 		};
 		1AA517A52084785D00B1B5D3 /* Model */ = {
@@ -298,6 +332,7 @@
 		1ADD306A207C9CA20039C1B5 /* DuDuService */ = {
 			isa = PBXGroup;
 			children = (
+				1A7C117D20A585F8009108BD /* Model */,
 				1ADD306C207C9CC90039C1B5 /* View */,
 				1ADD306B207C9CBD0039C1B5 /* Controller */,
 				1AC5DE7F207EFF0400DC9193 /* DuDuSerSB.storyboard */,
@@ -312,6 +347,8 @@
 				1A72A8AC2047A4DE0091F460 /* FirstViewController.m */,
 				1AC5DE7C207EFECB00DC9193 /* DuDuSerInfoViewController.h */,
 				1AC5DE7D207EFECB00DC9193 /* DuDuSerInfoViewController.m */,
+				1A7C117120A57B31009108BD /* MesListViewController.h */,
+				1A7C117220A57B31009108BD /* MesListViewController.m */,
 			);
 			name = Controller;
 			sourceTree = "<group>";
@@ -321,6 +358,8 @@
 			children = (
 				1ADD306D207C9DF40039C1B5 /* FirstViewTableViewCell.h */,
 				1ADD306E207C9DF40039C1B5 /* FirstViewTableViewCell.m */,
+				1A7C117420A57F2A009108BD /* MesListTableViewCell.h */,
+				1A7C117520A57F2A009108BD /* MesListTableViewCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -402,6 +441,7 @@
 				1AC5DE80207EFF0400DC9193 /* DuDuSerSB.storyboard in Resources */,
 				1A72A8B82047A4DE0091F460 /* LaunchScreen.storyboard in Resources */,
 				1A72A8B52047A4DE0091F460 /* Assets.xcassets in Resources */,
+				1A7C117B20A5839D009108BD /* GroupMeetAlertView.xib in Resources */,
 				1A72A8B32047A4DE0091F460 /* Main.storyboard in Resources */,
 				1AC5DE88207F331700DC9193 /* StartSB.storyboard in Resources */,
 				1A532E91207B6B660048B70C /* SecondSB.storyboard in Resources */,
@@ -476,14 +516,18 @@
 				1AA517BB2084922400B1B5D3 /* ToolsFunction.m in Sources */,
 				1ADD3069207C61BD0039C1B5 /* SecondViewTableViewCell.m in Sources */,
 				1A0C27CF2085928E0036C462 /* UserInfoManager.m in Sources */,
+				1A7C117620A57F2A009108BD /* MesListTableViewCell.m in Sources */,
 				1AA517A82084791E00B1B5D3 /* LoginManagerModel.m in Sources */,
+				1A7C117320A57B31009108BD /* MesListViewController.m in Sources */,
 				1A0C27CC20858D640036C462 /* ZYHttpAPI.m in Sources */,
 				1A72A8B02047A4DE0091F460 /* SecondViewController.m in Sources */,
 				1A0C27D2208592FA0036C462 /* UserProfileTable.m in Sources */,
 				1A72A8AA2047A4DE0091F460 /* AppDelegate.m in Sources */,
 				1A1E75D2208D7C83006B8A19 /* SettingViewController.m in Sources */,
+				1A7C118020A5861E009108BD /* MesListObj.m in Sources */,
 				1AA517AD20847A4000B1B5D3 /* UserProfile.m in Sources */,
 				1A1E75D5208D7ED1006B8A19 /* SettingTableViewCell.m in Sources */,
+				1A7C117C20A5839D009108BD /* GroupMeetAlertView.m in Sources */,
 				1AC5DE7E207EFECB00DC9193 /* DuDuSerInfoViewController.m in Sources */,
 				1AA517BF208498DD00B1B5D3 /* UIColor+APPColor.m in Sources */,
 				1AA517B320848C0C00B1B5D3 /* ZYDataBaseManager.m in Sources */,
