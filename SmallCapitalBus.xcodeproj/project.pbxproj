@@ -29,6 +29,8 @@
 		1A7C117B20A5839D009108BD /* GroupMeetAlertView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A7C117820A5839C009108BD /* GroupMeetAlertView.xib */; };
 		1A7C117C20A5839D009108BD /* GroupMeetAlertView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7C117920A5839C009108BD /* GroupMeetAlertView.m */; };
 		1A7C118020A5861E009108BD /* MesListObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A7C117F20A5861E009108BD /* MesListObj.m */; };
+		1AA433E620AAD4990090E65D /* DiyMjRefresh.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA433E520AAD4990090E65D /* DiyMjRefresh.m */; };
+		1AA433E920AAD5DC0090E65D /* ServiceListObj.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA433E820AAD5DC0090E65D /* ServiceListObj.m */; };
 		1AA517A82084791E00B1B5D3 /* LoginManagerModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA517A72084791E00B1B5D3 /* LoginManagerModel.m */; };
 		1AA517AD20847A4000B1B5D3 /* UserProfile.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA517AC20847A4000B1B5D3 /* UserProfile.m */; };
 		1AA517B320848C0C00B1B5D3 /* ZYDataBaseManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AA517B220848C0C00B1B5D3 /* ZYDataBaseManager.m */; };
@@ -86,6 +88,10 @@
 		1A7C117A20A5839D009108BD /* GroupMeetAlertView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = GroupMeetAlertView.h; sourceTree = "<group>"; };
 		1A7C117E20A5861E009108BD /* MesListObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MesListObj.h; sourceTree = "<group>"; };
 		1A7C117F20A5861E009108BD /* MesListObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = MesListObj.m; sourceTree = "<group>"; };
+		1AA433E420AAD4990090E65D /* DiyMjRefresh.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DiyMjRefresh.h; sourceTree = "<group>"; };
+		1AA433E520AAD4990090E65D /* DiyMjRefresh.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DiyMjRefresh.m; sourceTree = "<group>"; };
+		1AA433E720AAD5DC0090E65D /* ServiceListObj.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ServiceListObj.h; sourceTree = "<group>"; };
+		1AA433E820AAD5DC0090E65D /* ServiceListObj.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ServiceListObj.m; sourceTree = "<group>"; };
 		1AA517A62084791E00B1B5D3 /* LoginManagerModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = LoginManagerModel.h; sourceTree = "<group>"; };
 		1AA517A72084791E00B1B5D3 /* LoginManagerModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = LoginManagerModel.m; sourceTree = "<group>"; };
 		1AA517AB20847A4000B1B5D3 /* UserProfile.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = UserProfile.h; sourceTree = "<group>"; };
@@ -187,6 +193,7 @@
 		1A7C117720A58365009108BD /* Unility */ = {
 			isa = PBXGroup;
 			children = (
+				1AA433E320AAD4990090E65D /* DiyMJRefresh */,
 				1A7C117A20A5839D009108BD /* GroupMeetAlertView.h */,
 				1A7C117920A5839C009108BD /* GroupMeetAlertView.m */,
 				1A7C117820A5839C009108BD /* GroupMeetAlertView.xib */,
@@ -199,8 +206,19 @@
 			children = (
 				1A7C117E20A5861E009108BD /* MesListObj.h */,
 				1A7C117F20A5861E009108BD /* MesListObj.m */,
+				1AA433E720AAD5DC0090E65D /* ServiceListObj.h */,
+				1AA433E820AAD5DC0090E65D /* ServiceListObj.m */,
 			);
 			name = Model;
+			sourceTree = "<group>";
+		};
+		1AA433E320AAD4990090E65D /* DiyMJRefresh */ = {
+			isa = PBXGroup;
+			children = (
+				1AA433E420AAD4990090E65D /* DiyMjRefresh.h */,
+				1AA433E520AAD4990090E65D /* DiyMjRefresh.m */,
+			);
+			path = DiyMJRefresh;
 			sourceTree = "<group>";
 		};
 		1AA517A52084785D00B1B5D3 /* Model */ = {
@@ -542,6 +560,7 @@
 				1A72A8AA2047A4DE0091F460 /* AppDelegate.m in Sources */,
 				1A1E75D2208D7C83006B8A19 /* SettingViewController.m in Sources */,
 				1A7C118020A5861E009108BD /* MesListObj.m in Sources */,
+				1AA433E920AAD5DC0090E65D /* ServiceListObj.m in Sources */,
 				1AA517AD20847A4000B1B5D3 /* UserProfile.m in Sources */,
 				1A1E75D5208D7ED1006B8A19 /* SettingTableViewCell.m in Sources */,
 				1A7C117C20A5839D009108BD /* GroupMeetAlertView.m in Sources */,
@@ -549,6 +568,7 @@
 				1AA517BF208498DD00B1B5D3 /* UIColor+APPColor.m in Sources */,
 				1AA517B320848C0C00B1B5D3 /* ZYDataBaseManager.m in Sources */,
 				1A72A8BB2047A4DE0091F460 /* main.m in Sources */,
+				1AA433E620AAD4990090E65D /* DiyMjRefresh.m in Sources */,
 				1A72A8AD2047A4DE0091F460 /* FirstViewController.m in Sources */,
 				1ADD306F207C9DF40039C1B5 /* FirstViewTableViewCell.m in Sources */,
 				1AA517B720848E0400B1B5D3 /* NSString+FilePath.m in Sources */,

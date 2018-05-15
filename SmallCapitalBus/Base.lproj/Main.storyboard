@@ -162,10 +162,16 @@
                                                         <constraint firstAttribute="height" constant="60" id="RGj-0x-Qob"/>
                                                         <constraint firstAttribute="width" constant="60" id="WdE-i6-NuD"/>
                                                     </constraints>
+                                                    <userDefinedRuntimeAttributes>
+                                                        <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                                            <integer key="value" value="30"/>
+                                                        </userDefinedRuntimeAttribute>
+                                                        <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                                                    </userDefinedRuntimeAttributes>
                                                 </imageView>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rTw-6n-hgd">
-                                                    <rect key="frame" x="90" y="37" width="42" height="21"/>
-                                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <rect key="frame" x="90" y="17.5" width="40" height="18"/>
+                                                    <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
@@ -173,11 +179,15 @@
                                             <constraints>
                                                 <constraint firstItem="rTw-6n-hgd" firstAttribute="leading" secondItem="PeU-I8-tnc" secondAttribute="trailing" constant="15" id="7R3-dI-fEb"/>
                                                 <constraint firstItem="PeU-I8-tnc" firstAttribute="leading" secondItem="KEa-P7-1mi" secondAttribute="leading" constant="15" id="RuB-Te-AcG"/>
-                                                <constraint firstItem="rTw-6n-hgd" firstAttribute="centerY" secondItem="PeU-I8-tnc" secondAttribute="centerY" id="Vsz-qx-UXx"/>
+                                                <constraint firstItem="rTw-6n-hgd" firstAttribute="top" secondItem="PeU-I8-tnc" secondAttribute="top" id="igM-Qd-7iP"/>
                                                 <constraint firstItem="PeU-I8-tnc" firstAttribute="centerY" secondItem="KEa-P7-1mi" secondAttribute="centerY" id="tvR-U1-G9q"/>
                                                 <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="rTw-6n-hgd" secondAttribute="trailing" constant="20" symbolic="YES" id="y8s-Ab-4rj"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="userImg" destination="PeU-I8-tnc" id="j5c-Vt-HJ5"/>
+                                            <outlet property="userNameLab" destination="rTw-6n-hgd" id="TVO-Kz-Q0e"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                                 <connections>
@@ -197,6 +207,9 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="督督列表" id="HhZ-Dg-dl6"/>
+                    <connections>
+                        <outlet property="myTableView" destination="ujB-2i-BHk" id="kUX-vn-Sbd"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="pkY-zn-hz7" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

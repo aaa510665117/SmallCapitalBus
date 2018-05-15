@@ -18,6 +18,7 @@
 #import "ZYHttpAPI.h"
 #import <Masonry/Masonry.h>
 #import "TMCache.h"
+#import "DiyMjRefresh.h"
 
 #import "NSString+FilePath.h"
 #import "UIColor+APPColor.h"

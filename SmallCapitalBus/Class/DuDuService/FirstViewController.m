@@ -10,9 +10,17 @@
 #import "FirstViewTableViewCell.h"
 #import "DuDuSerInfoViewController.h"
 #import "MesListViewController.h"
+#import "MJRefresh.h"
+#import "ServiceListObj.h"
+
+#define MAX_SERVICE_PAGE 10
 
 @interface FirstViewController ()
-
+{
+    BOOL isViewDidAppear;
+}
+@property(nonatomic, assign) long page;
+@property(nonatomic, strong) NSMutableArray * showDataArray;
 @end
 
 @implementation FirstViewController
@@ -23,6 +31,10 @@
     //我的消息按钮
     UIBarButtonItem * todayGoodMes = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"benefit_message"] style:UIBarButtonItemStylePlain target:self action:@selector(clickMesList)];
     self.navigationItem.rightBarButtonItem = todayGoodMes;
+    isViewDidAppear = NO;
+    _showDataArray = [[NSMutableArray alloc]init];
+    [self addHeader];
+    [self addFooter];
 }
 
 -(void)clickMesList
@@ -30,6 +42,99 @@
     MesListViewController * mesList = [[MesListViewController alloc]init];
     mesList.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:mesList animated:YES];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    if(isViewDidAppear == NO)
+    {
+        [_myTableView.mj_header beginRefreshing];         //获取列表展示数据
+    }
+    isViewDidAppear = YES;
+}
+
+- (void)addHeader
+{
+    __weak typeof(self) vc = self;
+    _myTableView.mj_header = [MJRefreshNormalHeader headerWithRefreshingBlock:^{
+        // 进入刷新状态后会自动调用这个block
+        [vc getServiceList:1];
+    }];
+}
+
+- (void)addFooter
+{
+    __weak typeof(self) vc = self;
+    // 添加上拉刷新尾部控件
+    _myTableView.mj_footer = [MJRefreshAutoNormalFooter footerWithRefreshingBlock:^{
+        // 进入刷新状态就会回调这个Block
+        [vc getServiceList:vc.page];
+    }];
+}
+
+-(void)getServiceList:(long)page
+{
+    __weak typeof (self)vc = self;
+    NSMutableDictionary *httpDic = [NSMutableDictionary dictionary];
+    [httpDic setObject:@"RpPUjl7yNKTAVisj7544mFTAvolQaeop" forKey:@"ss"];
+    [httpDic setObject:[NSString stringWithFormat:@"%ld",page] forKey:@"page"];
+    
+    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"api/v1/baseuser/check/order/list" withParams:httpDic withSuccess:^(NSDictionary *success) {
+        
+        if([[success objectForKey:HTTP_RETURN_KEY] integerValue] == 1)
+        {
+            NSMutableArray * temp = [[NSMutableArray alloc]init];
+            NSMutableArray * dic = [success objectForKey:HTTP_RETURN_RESULT];
+            [dic enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
+                
+                ServiceListObj *groupMode = [[ServiceListObj alloc]init];
+                groupMode.order_id = [obj ac_stringForKey:@"order_id"];
+                groupMode.created_at = [obj ac_stringForKey:@"created_at"];
+                groupMode.order_status = [obj ac_stringForKey:@"order_status"];
+                groupMode.user_name = [obj ac_stringForKey:@"user_name"];
+                groupMode.thumbnail_image_url = [obj ac_stringForKey:@"thumbnail_image_url"];
+                groupMode.price = [obj ac_stringForKey:@"price"];
+                groupMode.address = [obj ac_stringForKey:@"address"];
+                [temp addObject:groupMode];
+            }];
+            
+            //数据处理结果加载
+            if (page == 1)
+            {
+                if (dic.count) vc.page = 2;
+                vc.showDataArray = temp;
+            }
+            else
+            {
+                if (dic.count) vc.page++;
+                [vc.showDataArray addObjectsFromArray:temp];
+            }
+            
+            //刷新控件判断加载
+            if(dic.count < MAX_SERVICE_PAGE)
+            {
+                [vc.myTableView.mj_footer endRefreshingWithNoMoreData];
+            }
+            else
+            {
+                [vc.myTableView.mj_footer endRefreshing];
+            }
+            
+            [vc.myTableView reloadData];
+            [vc.myTableView.mj_header endRefreshing];
+        }
+        else
+        {
+            [ZYHttpAPI analysisErrorCode:success withRequestAdd:@"api/v1/baseuser/check/order/list"];
+        }
+        
+    } withFailure:^(NSDictionary *failure) {
+        
+        [ToolsFunction hideHttpPromptView:nil];
+        
+        [ToolsFunction showPromptViewWithString:NSLocalizedString(@"HTTP_SERVER_ERROR", nil) background:nil timeDuration:1];
+    }];
 }
 
 #pragma mark - Table view data source
@@ -41,7 +146,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return _showDataArray.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -62,9 +167,11 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"FirstViewTableViewCell";
+    ServiceListObj * serviceObj = [_showDataArray objectAtIndex:indexPath.row];
     FirstViewTableViewCell *cell = (FirstViewTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
-    
+    [cell.userImg getAvatarThumbnailWithURL:serviceObj.thumbnail_image_url];
+    cell.userNameLab.text = serviceObj.user_name;
     return cell;
 }
 
