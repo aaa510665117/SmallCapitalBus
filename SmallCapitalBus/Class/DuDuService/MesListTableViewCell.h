@@ -10,4 +10,7 @@
 
 @interface MesListTableViewCell : UITableViewCell
 
+@property (weak, nonatomic) IBOutlet UIImageView *userImg;
+@property (weak, nonatomic) IBOutlet UILabel *userNameLab;
+
 @end

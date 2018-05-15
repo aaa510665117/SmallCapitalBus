@@ -24,12 +24,12 @@
     [httpDic setValue:[AppDelegate appDelegate].userProfile.userAccountNumber forKey:@"un"];
     [httpDic setValue:pin forKey:@"pin"];
     [httpDic setValue:[AppDelegate appDelegate].userProfile.deviceToken forKey:@"mid"];
-    [httpDic setValue:[NSString stringWithFormat:@"%d",PUSH_SERVER_APNS] forKey:@"pushsvc"];
+    [httpDic setValue:[NSString stringWithFormat:@"%d",PUSH_SERVER_APNS] forKey:@"push_service_type"];
     [httpDic setValue:@"2" forKey:@"ct"];
     
     [ToolsFunction showHttpPromptView:nil];
     
-    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"login_note_verify.php" withParams:httpDic withSuccess:^(NSDictionary *success) {
+    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"api/ysbt/auth/mobile/login" withParams:httpDic withSuccess:^(NSDictionary *success) {
         
         [ToolsFunction hideHttpPromptView:nil];
         
@@ -39,18 +39,18 @@
             [AppDelegate appDelegate].userProfile.autoLoginState = AUTO_LOGIN_CS;
             NSDictionary *resultDic = [success objectForKey:HTTP_RETURN_RESULT];
             //保存用户部分信息
-            [AppDelegate appDelegate].userProfile.userSession = [resultDic objectForKey:@"ss"];
-            [AppDelegate appDelegate].userProfile.userID = [resultDic objectForKey:@"uid"];
-            [AppDelegate appDelegate].userProfile.userName = [resultDic objectForKey:@"username"];
-            [AppDelegate appDelegate].userProfile.userProfileVersion = [resultDic objectForKey:@"piv"];
-            [AppDelegate appDelegate].userProfile.userAvatarVersion = [resultDic objectForKey:@"pav"];
-            [AppDelegate appDelegate].userProfile.privlegeId = [resultDic objectForKey:@"privilege_id"];
-            [AppDelegate appDelegate].userProfile.firstaidAPIServer = [resultDic objectForKey:@"fristaid_api_server"];
-            [AppDelegate appDelegate].userProfile.firstaidAPIServerPort = [resultDic objectForKey:@"fristaid_api_server_port"];
-            [AppDelegate appDelegate].userProfile.firstaidNewsAPIServer = [resultDic objectForKey:@"fristaid_news_server"];
-            [AppDelegate appDelegate].userProfile.firstaidNewsAPIServerPort = [resultDic objectForKey:@"fristaid_news_server_port"];
-            [AppDelegate appDelegate].userProfile.firstaidFileServer = [resultDic objectForKey:@"file_server"];
-            [AppDelegate appDelegate].userProfile.firstaidFileServerPort = [resultDic objectForKey:@"file_server_port"];
+            [AppDelegate appDelegate].userProfile.userSession = [resultDic ac_stringForKey:@"session"];
+            [AppDelegate appDelegate].userProfile.userID = [resultDic ac_stringForKey:@"user_id"];
+            [AppDelegate appDelegate].userProfile.userName = [resultDic ac_stringForKey:@"user_name"];
+            [AppDelegate appDelegate].userProfile.userProfileVersion = [resultDic ac_stringForKey:@"piv"];
+            [AppDelegate appDelegate].userProfile.userAvatarVersion = [resultDic ac_stringForKey:@"pav"];
+            [AppDelegate appDelegate].userProfile.privlegeId = [resultDic ac_stringForKey:@"privilege_id"];
+            [AppDelegate appDelegate].userProfile.firstaidAPIServer = [resultDic ac_stringForKey:@"fristaid_api_server"];
+            [AppDelegate appDelegate].userProfile.firstaidAPIServerPort = [resultDic ac_stringForKey:@"fristaid_api_server_port"];
+            [AppDelegate appDelegate].userProfile.firstaidNewsAPIServer = [resultDic ac_stringForKey:@"fristaid_news_server"];
+            [AppDelegate appDelegate].userProfile.firstaidNewsAPIServerPort = [resultDic ac_stringForKey:@"fristaid_news_server_port"];
+            [AppDelegate appDelegate].userProfile.firstaidFileServer = [resultDic ac_stringForKey:@"file_server"];
+            [AppDelegate appDelegate].userProfile.firstaidFileServerPort = [resultDic ac_stringForKey:@"file_server_port"];
             //创建用户目录
             [[AppDelegate appDelegate].userProfile createUserDataDirectory];
             //保存用户数据
@@ -70,7 +70,7 @@
         }
         else
         {
-            [ZYHttpAPI analysisErrorCode:success withRequestAdd:@"login_note_verify.php"];
+            [ZYHttpAPI analysisErrorCode:success withRequestAdd:@"api/ysbt/auth/mobile/login"];
         }
         
     } withFailure:^(NSDictionary *failure) {

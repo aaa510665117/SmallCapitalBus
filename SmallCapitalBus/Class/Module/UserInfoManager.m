@@ -35,7 +35,7 @@
         [httpDic setValue:uid forKey:@"uid"];
     }
     
-    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"get_personal_info.php" withParams:httpDic withSuccess:^(NSDictionary *success) {
+    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"api/ysbt/user/profile" withParams:httpDic withSuccess:^(NSDictionary *success) {
         
         [ToolsFunction hideHttpPromptView:nil];
         
@@ -65,7 +65,7 @@
             {
                 failBlock();
             }
-            [ZYHttpAPI analysisErrorCode:success withRequestAdd:@"get_personal_info.php"];
+            [ZYHttpAPI analysisErrorCode:success withRequestAdd:@"api/ysbt/user/profile"];
         }
         
     } withFailure:^(NSDictionary *failure) {

@@ -15,14 +15,14 @@
 
 #ifdef DEBUG // 是Debug版本（开发版本）
 
-#define DEFAULT_SEHTTP_ADDRESS @"http://firstaid.kospital.com"   //http://firstaid.kospital.com   http://210.14.72.52
+#define DEFAULT_SEHTTP_ADDRESS @"http://ysbtdev.skyhospital.net"    //http://firstaid.kospital.com   http://210.14.72.52
 #define SEHTTP_PORT            @"80"
 #define SEHTTP_REALM           @"firstaid"
 #define SEHTTP_VERSION         @"1.0"
 
 #else        // 是Release版本（发布版本）
 
-#define DEFAULT_SEHTTP_ADDRESS @"http://firstaid.kospital.com"
+#define DEFAULT_SEHTTP_ADDRESS @"http://ysbt.skyhospital.net"
 #define SEHTTP_PORT            @"80"
 #define SEHTTP_REALM           @"firstaid"
 #define SEHTTP_VERSION         @"1.0"

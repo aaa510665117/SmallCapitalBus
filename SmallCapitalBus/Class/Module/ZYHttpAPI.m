@@ -43,12 +43,13 @@ static dispatch_once_t onceToken;
     NSString * baseURLStr;
     if(appDelegate.userProfile.firstaidAPIServer && ![appDelegate.userProfile.firstaidAPIServer isEqualToString:@""])
     {
-        baseURLStr = [NSString stringWithFormat:@"http://%@:%@/%@/%@/",appDelegate.userProfile.firstaidAPIServer,appDelegate.userProfile.firstaidAPIServerPort,SEHTTP_REALM,SEHTTP_VERSION];
+//        baseURLStr = [NSString stringWithFormat:@"http://%@:%@/%@/%@/",appDelegate.userProfile.firstaidAPIServer,appDelegate.userProfile.firstaidAPIServerPort,SEHTTP_REALM,SEHTTP_VERSION];
+        baseURLStr = [NSString stringWithFormat:@"%@//", DEFAULT_SEHTTP_ADDRESS];
     }
     else
     {
         //@"http://192.168.20.13:80/firstaid/1.0/"];
-        baseURLStr = [NSString stringWithFormat:@"%@:%@/%@/%@/", DEFAULT_SEHTTP_ADDRESS,SEHTTP_PORT,SEHTTP_REALM,SEHTTP_VERSION];
+        baseURLStr = [NSString stringWithFormat:@"%@//", DEFAULT_SEHTTP_ADDRESS];
     }
     
     return baseURLStr;
@@ -102,7 +103,7 @@ static dispatch_once_t onceToken;
 //        return;
 //    }
     
-    NSString *requestUrl = [NSString stringWithFormat:@"%@%@",[ZYHttpAPI baseURLStr],ApiName];
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@?os_type=ios&version=1.3.9",[ZYHttpAPI baseURLStr],ApiName];
     
     NSLog(@"\nAPI: requestOrdinary Address :: %@",requestUrl);
     
@@ -128,7 +129,7 @@ static dispatch_once_t onceToken;
        failureBlock:(void(^)(NSDictionary *failure))failure;
 {
     //请求地址
-    NSString *requestUrl = [NSString stringWithFormat:@"%@%@",[ZYHttpAPI baseURLStr],apiurl];
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@?os_type=ios&version=1.3.9",[ZYHttpAPI baseURLStr],apiurl];
     
     NSURLSessionDataTask *operation = [self POST:requestUrl parameters:param  constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
         
@@ -176,7 +177,7 @@ static dispatch_once_t onceToken;
 -(NSURLSessionDataTask *)uploadMultipartFile:(NSString *)apiurl withFile:(NSArray *)fileAry withParam:(NSMutableDictionary *)param name:(NSArray *)name fileName:(NSArray *)fileNameAry successBlock:(void (^)(NSDictionary *))success failureBlock:(void (^)(NSDictionary *))failure
 {
     //请求地址
-    NSString *requestUrl = [NSString stringWithFormat:@"%@%@",[ZYHttpAPI baseURLStr],apiurl];
+    NSString *requestUrl = [NSString stringWithFormat:@"%@%@?os_type=ios&version=1.3.9",[ZYHttpAPI baseURLStr],apiurl];
     
     NSURLSessionDataTask *operation = [self POST:requestUrl parameters:param constructingBodyWithBlock:^(id<AFMultipartFormData> formData) {
 

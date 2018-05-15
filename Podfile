@@ -19,6 +19,7 @@ target ‘SmallCapitalBus' do
   pod 'SVProgressHUD'
   pod 'Masonry'
   pod 'AFViewShaker'
+  pod 'TMCache'
 
 end
 

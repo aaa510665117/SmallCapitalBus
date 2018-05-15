@@ -38,6 +38,7 @@
     [super viewDidLoad];
     // Do any additional setup after loading the view.
     isViewDidAppear = NO;
+    _showDataArray = [[NSMutableArray alloc]init];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -54,18 +55,27 @@
 {
     __weak typeof(self) weakSelf = self;
     NSMutableDictionary * httpDic = [[NSMutableDictionary alloc]init];
-    [httpDic setValue:[AppDelegate appDelegate].userProfile.userSession forKey:@"ss"];
-    
-    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"" withParams:httpDic withSuccess:^(NSDictionary *success) {
+//    [httpDic setValue:[AppDelegate appDelegate].userProfile.userSession forKey:@"ss"];
+    [httpDic setValue:@"RpPUjl7yNKTAVisj7544mFTAvolQaeop" forKey:@"ss"];
+
+    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"api/ysbt/user/get/message" withParams:httpDic withSuccess:^(NSDictionary *success) {
         
         [ToolsFunction hideHttpPromptView:nil];
-        if([[success objectForKey:HTTP_RETURN_KEY] isEqualToString:@"1"])
+        if([[success ac_stringForKey:HTTP_RETURN_KEY] isEqualToString:@"1"])
         {
             NSArray * result = [success objectForKey:@"result"];
             NSMutableArray * temp = [[NSMutableArray alloc]init];
             [result enumerateObjectsUsingBlock:^(id  _Nonnull obj, NSUInteger idx, BOOL * _Nonnull stop) {
-                NSDictionary * dic = obj;
+                NSDictionary * dic = [obj objectForKey:@"body"];
                 MesListObj * rankGood = [[MesListObj alloc]init];
+                rankGood.src = [dic ac_stringForKey:@"src"];
+                rankGood.srcm = [dic ac_stringForKey:@"srcm"];
+                rankGood.thumbnail_image_url = [dic ac_stringForKey:@"thumbnail_image_url"];
+                rankGood.time = [dic ac_stringForKey:@"time"];
+                rankGood.type = [dic ac_stringForKey:@"type"];
+                rankGood.user_id = [dic ac_stringForKey:@"user_id"];
+                rankGood.user_name = [dic ac_stringForKey:@"user_name"];
+                rankGood.uuid = [dic ac_stringForKey:@"uuid"];
 
                 [temp addObject:rankGood];
             }];
@@ -92,7 +102,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 10;
+    return _showDataArray.count;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -113,8 +123,12 @@
 - (UITableViewCell *)tableView:(UITableView *)tableView cellForRowAtIndexPath:(NSIndexPath *)indexPath
 {
     static NSString *CellIdentifier = @"MesListTableViewCell";
+    MesListObj * rankGood = [_showDataArray objectAtIndex:indexPath.row];
+
     MesListTableViewCell *cell = (MesListTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
     cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
+    cell.userNameLab.text = rankGood.user_name;
+    [cell.userImg getAvatarThumbnailWithURL:rankGood.thumbnail_image_url];
     
     return cell;
 }
@@ -123,9 +137,34 @@
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
     
+    MesListObj * rankGood = [_showDataArray objectAtIndex:indexPath.row];
+    
     //督督是否接单View
     GroupMeetAlertView * groupMeetAlert = [[GroupMeetAlertView alloc]initWithFrame:CGRectMake(0, 0, UISCREEN_BOUNDS_SIZE.width, UISCREEN_BOUNDS_SIZE.height) withTilte:@"是否接单？" complete:^{
+        
+//        __weak typeof(self) weakSelf = self;
+        NSMutableDictionary * httpDic = [[NSMutableDictionary alloc]init];
+        //    [httpDic setValue:[AppDelegate appDelegate].userProfile.userSession forKey:@"ss"];
+        [httpDic setValue:@"RpPUjl7yNKTAVisj7544mFTAvolQaeop" forKey:@"ss"];
+        [httpDic setValue:rankGood.user_id forKey:@"user_id"];
 
+        [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"api/v1/baseuser/grab/single/new" withParams:httpDic withSuccess:^(NSDictionary *success) {
+            
+            [ToolsFunction hideHttpPromptView:nil];
+            if([[success ac_stringForKey:HTTP_RETURN_KEY] isEqualToString:@"1"])
+            {
+                [ToolsFunction showPromptViewWithString:@"接单成功" background:nil timeDuration:1];
+            }
+            else
+            {
+                [ZYHttpAPI analysisErrorCode:success withRequestAdd:@"api/v1/baseuser/grab/single/new"];
+            }
+            
+        } withFailure:^(NSDictionary *failure) {
+            
+            [ToolsFunction showPromptViewWithString:NSLocalizedString(@"HTTP_SERVER_ERROR", nil) background:nil timeDuration:1];
+        }];
+        
     }];
     [groupMeetAlert show];
 }

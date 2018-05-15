@@ -13,6 +13,9 @@
 		1A0C27D5208593CB0036C462 /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C27D4208593CB0036C462 /* NSObject+ObjectMap.m */; };
 		1A1E75D2208D7C83006B8A19 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E75D1208D7C83006B8A19 /* SettingViewController.m */; };
 		1A1E75D5208D7ED1006B8A19 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E75D4208D7ED1006B8A19 /* SettingTableViewCell.m */; };
+		1A4BEB1520A92A3500D3BF78 /* NSDictionary+Accessors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BEB1320A92A3400D3BF78 /* NSDictionary+Accessors.m */; };
+		1A4BEB1820A964B800D3BF78 /* UIImageView+Avatar.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BEB1720A964B800D3BF78 /* UIImageView+Avatar.m */; };
+		1A4BEB1B20A9652400D3BF78 /* SEUpDownAPI.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BEB1A20A9652400D3BF78 /* SEUpDownAPI.m */; };
 		1A532E91207B6B660048B70C /* SecondSB.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1A532E90207B6B660048B70C /* SecondSB.storyboard */; };
 		1A72A8AA2047A4DE0091F460 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72A8A92047A4DE0091F460 /* AppDelegate.m */; };
 		1A72A8AD2047A4DE0091F460 /* FirstViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A72A8AC2047A4DE0091F460 /* FirstViewController.m */; };
@@ -55,6 +58,12 @@
 		1A1E75D3208D7ED1006B8A19 /* SettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
 		1A1E75D4208D7ED1006B8A19 /* SettingTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingTableViewCell.m; sourceTree = "<group>"; };
 		1A4A698A2090639F003686C0 /* SmallCapitalBus.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SmallCapitalBus.entitlements; sourceTree = "<group>"; };
+		1A4BEB1320A92A3400D3BF78 /* NSDictionary+Accessors.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSDictionary+Accessors.m"; sourceTree = "<group>"; };
+		1A4BEB1420A92A3500D3BF78 /* NSDictionary+Accessors.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSDictionary+Accessors.h"; sourceTree = "<group>"; };
+		1A4BEB1620A964B800D3BF78 /* UIImageView+Avatar.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImageView+Avatar.h"; sourceTree = "<group>"; };
+		1A4BEB1720A964B800D3BF78 /* UIImageView+Avatar.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+Avatar.m"; sourceTree = "<group>"; };
+		1A4BEB1920A9652400D3BF78 /* SEUpDownAPI.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = SEUpDownAPI.h; sourceTree = "<group>"; };
+		1A4BEB1A20A9652400D3BF78 /* SEUpDownAPI.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SEUpDownAPI.m; sourceTree = "<group>"; };
 		1A532E90207B6B660048B70C /* SecondSB.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SecondSB.storyboard; sourceTree = "<group>"; };
 		1A72A8A52047A4DE0091F460 /* SmallCapitalBus.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SmallCapitalBus.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1A72A8A82047A4DE0091F460 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -229,6 +238,8 @@
 		1AA517AE208488F200B1B5D3 /* ZYHttp */ = {
 			isa = PBXGroup;
 			children = (
+				1A4BEB1920A9652400D3BF78 /* SEUpDownAPI.h */,
+				1A4BEB1A20A9652400D3BF78 /* SEUpDownAPI.m */,
 				1A0C27CB20858D640036C462 /* ZYHttpAPI.h */,
 				1A0C27CA20858D630036C462 /* ZYHttpAPI.m */,
 				1AA517AF2084893800B1B5D3 /* HttpConfig.h */,
@@ -250,6 +261,10 @@
 		1AA517B420848DDC00B1B5D3 /* ExternClass */ = {
 			isa = PBXGroup;
 			children = (
+				1A4BEB1620A964B800D3BF78 /* UIImageView+Avatar.h */,
+				1A4BEB1720A964B800D3BF78 /* UIImageView+Avatar.m */,
+				1A4BEB1420A92A3500D3BF78 /* NSDictionary+Accessors.h */,
+				1A4BEB1320A92A3400D3BF78 /* NSDictionary+Accessors.m */,
 				1A0C27D3208593CB0036C462 /* NSObject+ObjectMap.h */,
 				1A0C27D4208593CB0036C462 /* NSObject+ObjectMap.m */,
 				1AA517BD208498D900B1B5D3 /* UIColor+APPColor.h */,
@@ -518,10 +533,12 @@
 				1A0C27CF2085928E0036C462 /* UserInfoManager.m in Sources */,
 				1A7C117620A57F2A009108BD /* MesListTableViewCell.m in Sources */,
 				1AA517A82084791E00B1B5D3 /* LoginManagerModel.m in Sources */,
+				1A4BEB1520A92A3500D3BF78 /* NSDictionary+Accessors.m in Sources */,
 				1A7C117320A57B31009108BD /* MesListViewController.m in Sources */,
 				1A0C27CC20858D640036C462 /* ZYHttpAPI.m in Sources */,
 				1A72A8B02047A4DE0091F460 /* SecondViewController.m in Sources */,
 				1A0C27D2208592FA0036C462 /* UserProfileTable.m in Sources */,
+				1A4BEB1B20A9652400D3BF78 /* SEUpDownAPI.m in Sources */,
 				1A72A8AA2047A4DE0091F460 /* AppDelegate.m in Sources */,
 				1A1E75D2208D7C83006B8A19 /* SettingViewController.m in Sources */,
 				1A7C118020A5861E009108BD /* MesListObj.m in Sources */,
@@ -537,6 +554,7 @@
 				1AA517B720848E0400B1B5D3 /* NSString+FilePath.m in Sources */,
 				1AC5DE8B207F383500DC9193 /* SignViewController.m in Sources */,
 				1A0C27D5208593CB0036C462 /* NSObject+ObjectMap.m in Sources */,
+				1A4BEB1820A964B800D3BF78 /* UIImageView+Avatar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

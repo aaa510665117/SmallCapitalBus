@@ -70,7 +70,7 @@
     [httpDic setValue:_mobelTextView.text forKey:@"un"];
     
     [ToolsFunction showHttpPromptView:nil];
-    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"login_note.php" withParams:httpDic withSuccess:^(NSDictionary *success) {
+    [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"api/ysbt/auth/login/send/sms" withParams:httpDic withSuccess:^(NSDictionary *success) {
         
         [ToolsFunction hideHttpPromptView:nil];
         
@@ -81,7 +81,7 @@
         }
         else
         {
-            [ZYHttpAPI analysisErrorCode:success withRequestAdd:@"login_note.php"];
+            [ZYHttpAPI analysisErrorCode:success withRequestAdd:@"api/ysbt/auth/login/send/sms"];
         }
         
     } withFailure:^(NSDictionary *failure) {
