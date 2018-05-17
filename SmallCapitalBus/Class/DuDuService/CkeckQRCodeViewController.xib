@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="11201" systemVersion="16A323" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11161"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="CkeckQRCodeViewController">
+            <connections>
+                <outlet property="checkQRView" destination="f8M-Wl-eqX" id="7PL-Qd-zUQ"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="qrCode_border" translatesAutoresizingMaskIntoConstraints="NO" id="f8M-Wl-eqX">
+                    <constraints>
+                        <constraint firstAttribute="width" constant="250" id="92W-N6-z4x"/>
+                        <constraint firstAttribute="height" constant="250" id="Zcm-Zd-3MC"/>
+                    </constraints>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="layer.borderWidth">
+                            <integer key="value" value="1"/>
+                        </userDefinedRuntimeAttribute>
+                        <userDefinedRuntimeAttribute type="color" keyPath="layer.borderColorFromUIColor">
+                            <color key="value" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                </imageView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="gnv-yb-nAM">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="kq2-pz-71R">
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="将二维码对入取景框，即可自动扫描" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Ez7-Bb-Fr6">
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="Ez7-Bb-Fr6" firstAttribute="leading" secondItem="kq2-pz-71R" secondAttribute="leading" id="0XW-TH-Vy7"/>
+                        <constraint firstAttribute="trailing" secondItem="Ez7-Bb-Fr6" secondAttribute="trailing" id="HJ9-8r-eJx"/>
+                        <constraint firstItem="Ez7-Bb-Fr6" firstAttribute="top" secondItem="kq2-pz-71R" secondAttribute="top" constant="10" id="Jvj-Iu-rm4"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7oI-Xm-ocJ">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tP1-eA-gF0">
+                    <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="0.40000000000000002" colorSpace="custom" customColorSpace="sRGB"/>
+                </view>
+            </subviews>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="kq2-pz-71R" secondAttribute="bottom" id="5eP-8y-FAZ"/>
+                <constraint firstAttribute="trailing" secondItem="gnv-yb-nAM" secondAttribute="trailing" id="Aeg-zb-yoI"/>
+                <constraint firstItem="gnv-yb-nAM" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="AhC-aX-Y5n"/>
+                <constraint firstItem="kq2-pz-71R" firstAttribute="top" secondItem="7oI-Xm-ocJ" secondAttribute="bottom" id="Fb3-29-sGw"/>
+                <constraint firstAttribute="trailing" secondItem="kq2-pz-71R" secondAttribute="trailing" id="G4Q-fv-Q0L"/>
+                <constraint firstItem="f8M-Wl-eqX" firstAttribute="leading" secondItem="7oI-Xm-ocJ" secondAttribute="trailing" id="INp-yh-0Kz"/>
+                <constraint firstItem="gnv-yb-nAM" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="LmR-xP-qAb"/>
+                <constraint firstItem="7oI-Xm-ocJ" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="Ow3-SQ-F0h"/>
+                <constraint firstAttribute="trailing" secondItem="tP1-eA-gF0" secondAttribute="trailing" id="Rlk-7S-HT3"/>
+                <constraint firstItem="7oI-Xm-ocJ" firstAttribute="top" secondItem="gnv-yb-nAM" secondAttribute="bottom" id="SVF-nO-qia"/>
+                <constraint firstItem="f8M-Wl-eqX" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-20" id="WBT-rb-ry7"/>
+                <constraint firstItem="tP1-eA-gF0" firstAttribute="top" secondItem="gnv-yb-nAM" secondAttribute="bottom" id="hxz-gO-MjF"/>
+                <constraint firstItem="kq2-pz-71R" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="l1e-nE-wya"/>
+                <constraint firstItem="kq2-pz-71R" firstAttribute="top" secondItem="tP1-eA-gF0" secondAttribute="bottom" id="mxg-KZ-glr"/>
+                <constraint firstItem="kq2-pz-71R" firstAttribute="top" secondItem="f8M-Wl-eqX" secondAttribute="bottom" id="nji-UX-24t"/>
+                <constraint firstItem="f8M-Wl-eqX" firstAttribute="top" secondItem="gnv-yb-nAM" secondAttribute="bottom" id="oz0-Zo-77i"/>
+                <constraint firstItem="tP1-eA-gF0" firstAttribute="leading" secondItem="f8M-Wl-eqX" secondAttribute="trailing" id="tqm-Zr-BrW"/>
+                <constraint firstItem="f8M-Wl-eqX" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="vHA-3O-7JS"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="qrCode_border" width="250" height="250"/>
+    </resources>
+</document>

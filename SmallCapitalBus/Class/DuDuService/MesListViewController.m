@@ -56,7 +56,7 @@
     __weak typeof(self) weakSelf = self;
     NSMutableDictionary * httpDic = [[NSMutableDictionary alloc]init];
 //    [httpDic setValue:[AppDelegate appDelegate].userProfile.userSession forKey:@"ss"];
-    [httpDic setValue:@"RpPUjl7yNKTAVisj7544mFTAvolQaeop" forKey:@"ss"];
+    [httpDic setValue:SESSION forKey:@"ss"];
 
     [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"api/ysbt/user/get/message" withParams:httpDic withSuccess:^(NSDictionary *success) {
         
@@ -145,7 +145,7 @@
 //        __weak typeof(self) weakSelf = self;
         NSMutableDictionary * httpDic = [[NSMutableDictionary alloc]init];
         //    [httpDic setValue:[AppDelegate appDelegate].userProfile.userSession forKey:@"ss"];
-        [httpDic setValue:@"RpPUjl7yNKTAVisj7544mFTAvolQaeop" forKey:@"ss"];
+        [httpDic setValue:SESSION forKey:@"ss"];
         [httpDic setValue:rankGood.user_id forKey:@"user_id"];
 
         [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"api/v1/baseuser/grab/single/new" withParams:httpDic withSuccess:^(NSDictionary *success) {

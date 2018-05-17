@@ -17,7 +17,19 @@
                     <view key="view" contentMode="scaleToFill" id="uyi-Mx-xh1">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="W9h-qA-7v0">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </tableView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="sfg-97-DUU" firstAttribute="bottom" secondItem="W9h-qA-7v0" secondAttribute="bottom" id="I8r-c3-tiO"/>
+                            <constraint firstItem="W9h-qA-7v0" firstAttribute="top" secondItem="sfg-97-DUU" secondAttribute="top" id="efC-ZG-ZI1"/>
+                            <constraint firstItem="W9h-qA-7v0" firstAttribute="leading" secondItem="sfg-97-DUU" secondAttribute="leading" id="mKL-eP-Jzz"/>
+                            <constraint firstItem="sfg-97-DUU" firstAttribute="trailing" secondItem="W9h-qA-7v0" secondAttribute="trailing" id="ra6-SM-4v9"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="sfg-97-DUU"/>
                     </view>
                 </viewController>

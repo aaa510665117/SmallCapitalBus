@@ -546,6 +546,18 @@
     return [phoneTest evaluateWithObject:userID];
 }
 
++ (BOOL)isOrderID:(NSString *)orderID
+{
+    //判断是否为腰酸背痛订单id
+    NSString * first = [[orderID componentsSeparatedByString:@"_"] firstObject];
+    if([first isEqualToString:@"YSBTDDID"])
+    {
+        return YES;
+    }
+    else
+        return NO;
+}
+
 #pragma mark -
 #pragma mark Image Operate Function
 

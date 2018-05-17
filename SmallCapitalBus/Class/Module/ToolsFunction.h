@@ -110,6 +110,8 @@
 // 判断是否正确UID
 + (BOOL)isUserID:(NSString *)userID;
 
++ (BOOL)isOrderID:(NSString *)orderID;
+
 #pragma mark -
 #pragma mark Image Operate Function
 

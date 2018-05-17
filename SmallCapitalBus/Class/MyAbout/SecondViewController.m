@@ -21,8 +21,8 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view, typically from a nib.
-    titleAry = @[@"个人信息",@"段位信息",@"设置"];
-    imgAry = @[@"reservation_person",@"reservation_order_service_name",@"password_icon_image"];
+    titleAry = @[@"个人信息",@"设置"];
+    imgAry = @[@"reservation_person",@"password_icon_image"];
 }
 
 #pragma mark - Table view data source
@@ -34,7 +34,7 @@
 
 - (NSInteger)tableView:(UITableView *)tableView numberOfRowsInSection:(NSInteger)section
 {
-    return 3;
+    return 2;
 }
 
 -(CGFloat)tableView:(UITableView *)tableView heightForHeaderInSection:(NSInteger)section
@@ -87,11 +87,6 @@
         }
             break;
         case 1:
-        {
-            
-        }
-            break;
-        case 2:
         {
             //设置
             SettingViewController * setView = [[SettingViewController alloc]init];

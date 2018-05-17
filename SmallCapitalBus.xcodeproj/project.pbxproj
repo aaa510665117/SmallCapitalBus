@@ -11,6 +11,8 @@
 		1A0C27CF2085928E0036C462 /* UserInfoManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C27CE2085928E0036C462 /* UserInfoManager.m */; };
 		1A0C27D2208592FA0036C462 /* UserProfileTable.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C27D0208592FA0036C462 /* UserProfileTable.m */; };
 		1A0C27D5208593CB0036C462 /* NSObject+ObjectMap.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A0C27D4208593CB0036C462 /* NSObject+ObjectMap.m */; };
+		1A11371820AD774500ECDDCA /* CkeckQRCodeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A11371520AD774300ECDDCA /* CkeckQRCodeViewController.m */; };
+		1A11371920AD774500ECDDCA /* CkeckQRCodeViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 1A11371720AD774400ECDDCA /* CkeckQRCodeViewController.xib */; };
 		1A1E75D2208D7C83006B8A19 /* SettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E75D1208D7C83006B8A19 /* SettingViewController.m */; };
 		1A1E75D5208D7ED1006B8A19 /* SettingTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A1E75D4208D7ED1006B8A19 /* SettingTableViewCell.m */; };
 		1A4BEB1520A92A3500D3BF78 /* NSDictionary+Accessors.m in Sources */ = {isa = PBXBuildFile; fileRef = 1A4BEB1320A92A3400D3BF78 /* NSDictionary+Accessors.m */; };
@@ -55,6 +57,9 @@
 		1A0C27D1208592FA0036C462 /* UserProfileTable.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserProfileTable.h; sourceTree = "<group>"; };
 		1A0C27D3208593CB0036C462 /* NSObject+ObjectMap.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "NSObject+ObjectMap.h"; sourceTree = "<group>"; };
 		1A0C27D4208593CB0036C462 /* NSObject+ObjectMap.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "NSObject+ObjectMap.m"; sourceTree = "<group>"; };
+		1A11371520AD774300ECDDCA /* CkeckQRCodeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CkeckQRCodeViewController.m; sourceTree = "<group>"; };
+		1A11371620AD774400ECDDCA /* CkeckQRCodeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CkeckQRCodeViewController.h; sourceTree = "<group>"; };
+		1A11371720AD774400ECDDCA /* CkeckQRCodeViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CkeckQRCodeViewController.xib; sourceTree = "<group>"; };
 		1A1E75D0208D7C83006B8A19 /* SettingViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingViewController.h; sourceTree = "<group>"; };
 		1A1E75D1208D7C83006B8A19 /* SettingViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = SettingViewController.m; sourceTree = "<group>"; };
 		1A1E75D3208D7ED1006B8A19 /* SettingTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = SettingTableViewCell.h; sourceTree = "<group>"; };
@@ -376,6 +381,9 @@
 		1ADD306B207C9CBD0039C1B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1A11371620AD774400ECDDCA /* CkeckQRCodeViewController.h */,
+				1A11371520AD774300ECDDCA /* CkeckQRCodeViewController.m */,
+				1A11371720AD774400ECDDCA /* CkeckQRCodeViewController.xib */,
 				1A72A8AB2047A4DE0091F460 /* FirstViewController.h */,
 				1A72A8AC2047A4DE0091F460 /* FirstViewController.m */,
 				1AC5DE7C207EFECB00DC9193 /* DuDuSerInfoViewController.h */,
@@ -475,6 +483,7 @@
 				1A72A8B82047A4DE0091F460 /* LaunchScreen.storyboard in Resources */,
 				1A72A8B52047A4DE0091F460 /* Assets.xcassets in Resources */,
 				1A7C117B20A5839D009108BD /* GroupMeetAlertView.xib in Resources */,
+				1A11371920AD774500ECDDCA /* CkeckQRCodeViewController.xib in Resources */,
 				1A72A8B32047A4DE0091F460 /* Main.storyboard in Resources */,
 				1AC5DE88207F331700DC9193 /* StartSB.storyboard in Resources */,
 				1A532E91207B6B660048B70C /* SecondSB.storyboard in Resources */,
@@ -556,6 +565,7 @@
 				1A0C27CC20858D640036C462 /* ZYHttpAPI.m in Sources */,
 				1A72A8B02047A4DE0091F460 /* SecondViewController.m in Sources */,
 				1A0C27D2208592FA0036C462 /* UserProfileTable.m in Sources */,
+				1A11371820AD774500ECDDCA /* CkeckQRCodeViewController.m in Sources */,
 				1A4BEB1B20A9652400D3BF78 /* SEUpDownAPI.m in Sources */,
 				1A72A8AA2047A4DE0091F460 /* AppDelegate.m in Sources */,
 				1A1E75D2208D7C83006B8A19 /* SettingViewController.m in Sources */,

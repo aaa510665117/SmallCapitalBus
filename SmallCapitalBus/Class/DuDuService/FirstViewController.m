@@ -12,6 +12,7 @@
 #import "MesListViewController.h"
 #import "MJRefresh.h"
 #import "ServiceListObj.h"
+#import "CkeckQRCodeViewController.h"
 
 #define MAX_SERVICE_PAGE 10
 
@@ -31,6 +32,12 @@
     //我的消息按钮
     UIBarButtonItem * todayGoodMes = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"benefit_message"] style:UIBarButtonItemStylePlain target:self action:@selector(clickMesList)];
     self.navigationItem.rightBarButtonItem = todayGoodMes;
+    //扫一扫
+    UIBarButtonItem * checkQr = [[UIBarButtonItem alloc]initWithImage:[UIImage imageNamed:@"checkQr"] style:UIBarButtonItemStylePlain target:self action:@selector(checkQr)];
+    self.navigationItem.leftBarButtonItem = checkQr;
+    todayGoodMes.tintColor = [UIColor lightGrayColor];
+    checkQr.tintColor = [UIColor darkGrayColor];
+
     isViewDidAppear = NO;
     _showDataArray = [[NSMutableArray alloc]init];
     [self addHeader];
@@ -42,6 +49,13 @@
     MesListViewController * mesList = [[MesListViewController alloc]init];
     mesList.hidesBottomBarWhenPushed = YES;
     [self.navigationController pushViewController:mesList animated:YES];
+}
+
+-(void)checkQr
+{
+    CkeckQRCodeViewController * checkQr = [[CkeckQRCodeViewController alloc]init];
+    checkQr.hidesBottomBarWhenPushed = YES;
+    [self.navigationController pushViewController:checkQr animated:YES];
 }
 
 -(void)viewDidAppear:(BOOL)animated
@@ -77,7 +91,7 @@
 {
     __weak typeof (self)vc = self;
     NSMutableDictionary *httpDic = [NSMutableDictionary dictionary];
-    [httpDic setObject:@"RpPUjl7yNKTAVisj7544mFTAvolQaeop" forKey:@"ss"];
+    [httpDic setObject:SESSION forKey:@"ss"];
     [httpDic setObject:[NSString stringWithFormat:@"%ld",page] forKey:@"page"];
     
     [[ZYHttpAPI sharedUpDownAPI]requestOrdinary:@"api/v1/baseuser/check/order/list" withParams:httpDic withSuccess:^(NSDictionary *success) {
@@ -169,9 +183,29 @@
     static NSString *CellIdentifier = @"FirstViewTableViewCell";
     ServiceListObj * serviceObj = [_showDataArray objectAtIndex:indexPath.row];
     FirstViewTableViewCell *cell = (FirstViewTableViewCell *)[tableView dequeueReusableCellWithIdentifier:CellIdentifier];
-    cell.accessoryType = UITableViewCellAccessoryDisclosureIndicator;
     [cell.userImg getAvatarThumbnailWithURL:serviceObj.thumbnail_image_url];
     cell.userNameLab.text = serviceObj.user_name;
+    cell.timeLab.text = serviceObj.created_at;
+    cell.addressLab.text = serviceObj.address;
+    switch ([serviceObj.order_status intValue]) {
+        case 0:
+        {cell.stateLab.text = @"待支付";}
+            break;
+        case 1:
+        {cell.stateLab.text = @"待服务";}
+            break;
+        case 2:
+        {cell.stateLab.text = @"服务中";}
+            break;
+        case 3:
+        {cell.stateLab.text = @"已完成";}
+            break;
+        case 4:
+        {cell.stateLab.text = @"已取消";}
+            break;
+        default:
+            break;
+    }
     return cell;
 }
 

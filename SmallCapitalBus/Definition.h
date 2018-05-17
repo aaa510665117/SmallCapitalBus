@@ -36,6 +36,7 @@
 
 #define WHCATE_APPID @"wxde708b9bc09959c2"                      //微信AppID
 #define WHCATE_SECRET @"77b82daa68d03302fe8ff07562add2de"       //微信secret
+#define SESSION @"RpPUjl7yNKTAVisj7544mFTAvolQaeop"
 
 //-----------------------------------------APP配置部分end------------------------------------------------//
 
