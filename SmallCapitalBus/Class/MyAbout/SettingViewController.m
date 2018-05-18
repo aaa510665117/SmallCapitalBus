@@ -8,6 +8,7 @@
 
 #import "SettingViewController.h"
 #import "SettingTableViewCell.h"
+#import "AboutUsViewController.h"
 
 @interface SettingViewController ()
 
@@ -92,7 +93,9 @@
     switch (indexPath.row) {
         case 0:
         {
-            
+            //关于我们
+            AboutUsViewController * aboutUs = [[AboutUsViewController alloc]init];
+            [self.navigationController pushViewController:aboutUs animated:YES];
         }
             break;
         default:

@@ -41,8 +41,8 @@
         
         if([[success objectForKey:HTTP_RETURN_KEY] integerValue] == 1)
         {
-            NSDictionary * dic = [success objectForKey:HTTP_RETURN_RESULT];
-            UserProfileTable * myUserProfile = [NSObject objectOfClass:[UserProfileTable getTableName] fromJSON:dic];
+            NSArray * dic = [success objectForKey:HTTP_RETURN_RESULT];
+            UserProfileTable * myUserProfile = [NSObject objectOfClass:[UserProfileTable getTableName] fromJSON:[dic objectAtIndex:0]];
             
             UserProfileTable * oldUserProfile = [UserProfileTable getUserProfileTableWithUID:uid];
             //保存个人信息表到数据库
@@ -79,5 +79,21 @@
     }];
 }
 
+//获取用户性别
+- (NSString *)getUserGender:(NSString *)genderID
+{
+    if ([genderID integerValue] == 1)
+    {
+        return @"男";
+    }
+    else if([genderID integerValue] == 2)
+    {
+        return @"女";
+    }
+    else
+    {
+        return @"未填写";
+    }
+}
 
 @end

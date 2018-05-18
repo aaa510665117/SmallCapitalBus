@@ -19,12 +19,12 @@
 //主键
 +(NSString *)getPrimaryKey
 {
-    return @"uid";
+    return @"user_id";
 }
 
 +(UserProfileTable *)getUserProfileTableWithUID:(NSString *)uid
 {
-   NSArray * resultArray = [ZYDataBaseManager searchToDB:[UserProfileTable class] withSql:[NSString stringWithFormat:@"uid='%@'",uid] withOrderBy:nil withOffSet:-1 withCount:-1];
+   NSArray * resultArray = [ZYDataBaseManager searchToDB:[UserProfileTable class] withSql:[NSString stringWithFormat:@"user_id='%@'",uid] withOrderBy:nil withOffSet:-1 withCount:-1];
     if(resultArray.count == 0)
     {
         return nil;

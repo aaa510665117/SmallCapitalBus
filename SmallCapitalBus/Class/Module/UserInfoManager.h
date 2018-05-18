@@ -17,4 +17,7 @@
 //获取个人信息
 -(void)getUserProfile:(NSString *)uid withPiv:(NSString *)piv  withSuccessBlock:(void(^)(UserProfileTable * userInfo))complete withFail:(void (^)(void))failBlock;
 
+//获取用户性别
+- (NSString *)getUserGender:(NSString *)genderID;
+
 @end

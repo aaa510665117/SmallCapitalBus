@@ -8,6 +8,7 @@
 
 #import "SecondViewController.h"
 #import "SettingViewController.h"
+#import "UserBasicSetViewController.h"
 
 @interface SecondViewController ()
 {
@@ -23,6 +24,12 @@
     // Do any additional setup after loading the view, typically from a nib.
     titleAry = @[@"个人信息",@"设置"];
     imgAry = @[@"reservation_person",@"password_icon_image"];
+}
+
+-(void)viewDidAppear:(BOOL)animated
+{
+    [super viewDidAppear:animated];
+    [_myTableView reloadData];
 }
 
 #pragma mark - Table view data source
@@ -65,6 +72,33 @@
         make.centerX.equalTo(darkView.mas_centerX);
         make.size.mas_equalTo(CGSizeMake([UIScreen mainScreen].bounds.size.width, 200));
     }];
+    
+    UserProfileTable * userProfile = [UserProfileTable getUserProfileTableWithUID:[AppDelegate appDelegate].userProfile.userID];
+    UIImageView * userImageView = [[UIImageView alloc]init];
+    userImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    [userImageView getAvatarThumbnailWithURL:userProfile.thumbnail_image_url];
+    userImageView.layer.cornerRadius = 45;
+    userImageView.layer.masksToBounds = YES;
+    [darkView addSubview:userImageView];
+    [userImageView mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.centerY.equalTo(darkView.mas_centerY);
+        make.centerX.equalTo(darkView.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(90, 90));
+    }];
+
+    UILabel * userNameLab = [[UILabel alloc]init];
+    userNameLab.translatesAutoresizingMaskIntoConstraints = NO;
+    userNameLab.text = userProfile.name;
+    userNameLab.textAlignment = NSTextAlignmentCenter;
+    [userNameLab setTintColor:[UIColor lightGrayColor]];
+    userNameLab.font = [UIFont fontWithName:@"Helvetica-Bold" size:16];
+    [darkView addSubview:userNameLab];
+    [userNameLab mas_makeConstraints:^(MASConstraintMaker *make) {
+        make.top.equalTo(userImageView.mas_bottom).with.offset(10);
+        make.centerX.equalTo(darkView.mas_centerX);
+        make.size.mas_equalTo(CGSizeMake(200, 30));
+    }];
+    
     return darkView;
 }
 
@@ -83,7 +117,10 @@
     switch (indexPath.row) {
         case 0:
         {
-            
+            //个人信息
+            UserBasicSetViewController *userBasicVC = [[UserBasicSetViewController alloc]init];
+            userBasicVC.hidesBottomBarWhenPushed = YES;
+            [self.navigationController pushViewController:userBasicVC animated:YES];
         }
             break;
         case 1:

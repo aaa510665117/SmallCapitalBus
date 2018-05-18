@@ -66,5 +66,89 @@
             </objects>
             <point key="canvasLocation" x="-50.399999999999999" y="-145.27736131934034"/>
         </scene>
+        <!--About Us View Controller-->
+        <scene sceneID="Tkm-dU-dj4">
+            <objects>
+                <viewController storyboardIdentifier="AboutUsViewController" id="jNG-Xa-8Q3" customClass="AboutUsViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="CD3-k0-Kcd"/>
+                        <viewControllerLayoutGuide type="bottom" id="e6t-it-zeX"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="pm1-9h-abQ">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="login_logo" translatesAutoresizingMaskIntoConstraints="NO" id="kpF-Us-hdH">
+                                <rect key="frame" x="112.5" y="211" width="150" height="145"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="150" id="7X7-eo-EPv"/>
+                                    <constraint firstAttribute="height" constant="145" id="RfL-gn-Zkw"/>
+                                </constraints>
+                            </imageView>
+                            <label opaque="NO" clipsSubviews="YES" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" V0.0.0 " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dQw-gO-W1v">
+                                <rect key="frame" x="166" y="590.5" width="43" height="14.5"/>
+                                <color key="backgroundColor" red="0.91764705879999997" green="0.33333333329999998" blue="0.1960784314" alpha="1" colorSpace="calibratedRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
+                                        <integer key="value" value="8"/>
+                                    </userDefinedRuntimeAttribute>
+                                </userDefinedRuntimeAttributes>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Copyright © 2017 DoMai therapy. All Rights Reserved." textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8xL-hu-uId">
+                                <rect key="frame" x="57.5" y="639" width="260" height="12"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="10"/>
+                                <color key="textColor" red="0.50196078430000002" green="0.50196078430000002" blue="0.50196078430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="陕西督脉正阳健康科技有限公司" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4iF-sR-Q6n">
+                                <rect key="frame" x="87.5" y="615" width="200" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.39607843139999999" green="0.39607843139999999" blue="0.39607843139999999" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="kpF-Us-hdH" firstAttribute="centerX" secondItem="pm1-9h-abQ" secondAttribute="centerX" id="DYH-5X-ILA"/>
+                            <constraint firstItem="4iF-sR-Q6n" firstAttribute="centerX" secondItem="pm1-9h-abQ" secondAttribute="centerX" id="IvF-0Q-ObB"/>
+                            <constraint firstItem="8xL-hu-uId" firstAttribute="top" secondItem="4iF-sR-Q6n" secondAttribute="bottom" constant="7" id="d03-Vf-FLR"/>
+                            <constraint firstAttribute="bottom" secondItem="8xL-hu-uId" secondAttribute="bottom" constant="16" id="j6d-NL-P0X"/>
+                            <constraint firstItem="kpF-Us-hdH" firstAttribute="centerY" secondItem="pm1-9h-abQ" secondAttribute="centerY" constant="-50" id="mcu-Ae-3wT"/>
+                            <constraint firstItem="8xL-hu-uId" firstAttribute="centerX" secondItem="pm1-9h-abQ" secondAttribute="centerX" id="tic-gg-zBz"/>
+                            <constraint firstItem="dQw-gO-W1v" firstAttribute="centerX" secondItem="pm1-9h-abQ" secondAttribute="centerX" id="vOU-0I-JSg"/>
+                            <constraint firstItem="4iF-sR-Q6n" firstAttribute="top" secondItem="dQw-gO-W1v" secondAttribute="bottom" constant="10" id="xC6-Gi-o7f"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="X73-uM-s3g"/>
+                        <variation key="default">
+                            <mask key="subviews">
+                                <exclude reference="kpF-Us-hdH"/>
+                                <exclude reference="dQw-gO-W1v"/>
+                                <exclude reference="8xL-hu-uId"/>
+                                <exclude reference="4iF-sR-Q6n"/>
+                            </mask>
+                        </variation>
+                        <variation key="widthClass=compact">
+                            <mask key="subviews">
+                                <include reference="kpF-Us-hdH"/>
+                                <include reference="dQw-gO-W1v"/>
+                                <include reference="8xL-hu-uId"/>
+                                <include reference="4iF-sR-Q6n"/>
+                            </mask>
+                        </variation>
+                    </view>
+                    <connections>
+                        <outlet property="versionLabel" destination="dQw-gO-W1v" id="ezg-B1-e0n"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Y2R-fF-adO" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="633" y="-145"/>
+        </scene>
     </scenes>
+    <resources>
+        <image name="login_logo" width="150" height="150"/>
+    </resources>
 </document>

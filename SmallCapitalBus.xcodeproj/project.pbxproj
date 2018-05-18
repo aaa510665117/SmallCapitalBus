@@ -47,6 +47,16 @@
 		1ADD306F207C9DF40039C1B5 /* FirstViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD306E207C9DF40039C1B5 /* FirstViewTableViewCell.m */; };
 		1AF1EE0620AE6C68006EF5BA /* DuSerInfoTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE0520AE6C68006EF5BA /* DuSerInfoTwoCell.m */; };
 		1AF1EE0920AE6C77006EF5BA /* DuSerInfoOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE0820AE6C77006EF5BA /* DuSerInfoOneCell.m */; };
+		1AF1EE0C20AE8567006EF5BA /* UserBasicSetViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE0A20AE8567006EF5BA /* UserBasicSetViewController.m */; };
+		1AF1EE1220AE86E3006EF5BA /* IQActionPickerViewOffice.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE0F20AE86E3006EF5BA /* IQActionPickerViewOffice.m */; };
+		1AF1EE1320AE86E3006EF5BA /* IQActionView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE1120AE86E3006EF5BA /* IQActionView.m */; };
+		1AF1EE1D20AE9DAA006EF5BA /* AWCollectionViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE1620AE9DAA006EF5BA /* AWCollectionViewCell.m */; };
+		1AF1EE1E20AE9DAA006EF5BA /* AWCollectionViewDialLayout.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE1820AE9DAA006EF5BA /* AWCollectionViewDialLayout.m */; };
+		1AF1EE1F20AE9DAA006EF5BA /* ComChoseHospitalViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE1A20AE9DAA006EF5BA /* ComChoseHospitalViewController.m */; };
+		1AF1EE2020AE9DAA006EF5BA /* CommonChoseCityPickerView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE1C20AE9DAA006EF5BA /* CommonChoseCityPickerView.m */; };
+		1AF1EE2420AE9E7E006EF5BA /* AreaManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE2320AE9E7E006EF5BA /* AreaManager.m */; };
+		1AF1EE2620AEA5B8006EF5BA /* place.db in Resources */ = {isa = PBXBuildFile; fileRef = 1AF1EE2520AEA5B7006EF5BA /* place.db */; };
+		1AF1EE2920AEB9B9006EF5BA /* AboutUsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE2720AEB9B8006EF5BA /* AboutUsViewController.m */; };
 		5726E56C4B0BEA5C72AD0CE0 /* libPods-SmallCapitalBus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 558C8ED3DF9DC7884BB693AE /* libPods-SmallCapitalBus.a */; };
 /* End PBXBuildFile section */
 
@@ -128,6 +138,25 @@
 		1AF1EE0520AE6C68006EF5BA /* DuSerInfoTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuSerInfoTwoCell.m; sourceTree = "<group>"; };
 		1AF1EE0720AE6C77006EF5BA /* DuSerInfoOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuSerInfoOneCell.h; sourceTree = "<group>"; };
 		1AF1EE0820AE6C77006EF5BA /* DuSerInfoOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuSerInfoOneCell.m; sourceTree = "<group>"; };
+		1AF1EE0A20AE8567006EF5BA /* UserBasicSetViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = UserBasicSetViewController.m; sourceTree = "<group>"; };
+		1AF1EE0B20AE8567006EF5BA /* UserBasicSetViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = UserBasicSetViewController.h; sourceTree = "<group>"; };
+		1AF1EE0E20AE86E3006EF5BA /* IQActionPickerViewOffice.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQActionPickerViewOffice.h; sourceTree = "<group>"; };
+		1AF1EE0F20AE86E3006EF5BA /* IQActionPickerViewOffice.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQActionPickerViewOffice.m; sourceTree = "<group>"; };
+		1AF1EE1020AE86E3006EF5BA /* IQActionView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = IQActionView.h; sourceTree = "<group>"; };
+		1AF1EE1120AE86E3006EF5BA /* IQActionView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = IQActionView.m; sourceTree = "<group>"; };
+		1AF1EE1520AE9DAA006EF5BA /* AWCollectionViewCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWCollectionViewCell.h; sourceTree = "<group>"; };
+		1AF1EE1620AE9DAA006EF5BA /* AWCollectionViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWCollectionViewCell.m; sourceTree = "<group>"; };
+		1AF1EE1720AE9DAA006EF5BA /* AWCollectionViewDialLayout.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AWCollectionViewDialLayout.h; sourceTree = "<group>"; };
+		1AF1EE1820AE9DAA006EF5BA /* AWCollectionViewDialLayout.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AWCollectionViewDialLayout.m; sourceTree = "<group>"; };
+		1AF1EE1920AE9DAA006EF5BA /* ComChoseHospitalViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ComChoseHospitalViewController.h; sourceTree = "<group>"; };
+		1AF1EE1A20AE9DAA006EF5BA /* ComChoseHospitalViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ComChoseHospitalViewController.m; sourceTree = "<group>"; };
+		1AF1EE1B20AE9DAA006EF5BA /* CommonChoseCityPickerView.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CommonChoseCityPickerView.h; sourceTree = "<group>"; };
+		1AF1EE1C20AE9DAA006EF5BA /* CommonChoseCityPickerView.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CommonChoseCityPickerView.m; sourceTree = "<group>"; };
+		1AF1EE2220AE9E7E006EF5BA /* AreaManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AreaManager.h; sourceTree = "<group>"; };
+		1AF1EE2320AE9E7E006EF5BA /* AreaManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AreaManager.m; sourceTree = "<group>"; };
+		1AF1EE2520AEA5B7006EF5BA /* place.db */ = {isa = PBXFileReference; lastKnownFileType = file; path = place.db; sourceTree = "<group>"; };
+		1AF1EE2720AEB9B8006EF5BA /* AboutUsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AboutUsViewController.m; sourceTree = "<group>"; };
+		1AF1EE2820AEB9B9006EF5BA /* AboutUsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AboutUsViewController.h; sourceTree = "<group>"; };
 		25324FD2C3B78F3AF0B80119 /* Pods-SmallCapitalBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmallCapitalBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmallCapitalBus/Pods-SmallCapitalBus.debug.xcconfig"; sourceTree = "<group>"; };
 		558C8ED3DF9DC7884BB693AE /* libPods-SmallCapitalBus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmallCapitalBus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC06030D21CC4058DEA280A4 /* Pods-SmallCapitalBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmallCapitalBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmallCapitalBus/Pods-SmallCapitalBus.release.xcconfig"; sourceTree = "<group>"; };
@@ -204,6 +233,8 @@
 		1A7C117720A58365009108BD /* Unility */ = {
 			isa = PBXGroup;
 			children = (
+				1AF1EE1420AE9DAA006EF5BA /* ChoseCity */,
+				1AF1EE0D20AE86E3006EF5BA /* IQActionView */,
 				1AA433E320AAD4990090E65D /* DiyMJRefresh */,
 				1A7C117A20A5839D009108BD /* GroupMeetAlertView.h */,
 				1A7C117920A5839C009108BD /* GroupMeetAlertView.m */,
@@ -244,6 +275,7 @@
 		1AA517A9208479C700B1B5D3 /* Module */ = {
 			isa = PBXGroup;
 			children = (
+				1AF1EE2120AE9E7E006EF5BA /* AreaObj */,
 				1AA517B8208491F800B1B5D3 /* ToolsFunction */,
 				1AA517B420848DDC00B1B5D3 /* ExternClass */,
 				1AA517B020848BEC00B1B5D3 /* DataBase */,
@@ -316,6 +348,7 @@
 		1AC5DE81207F009100DC9193 /* Support Files */ = {
 			isa = PBXGroup;
 			children = (
+				1AF1EE2520AEA5B7006EF5BA /* place.db */,
 				1AA517BC208496B800B1B5D3 /* Definition.h */,
 				1AC5DE82207F00E500DC9193 /* SmallCapitalBus-Prefix.pch */,
 			);
@@ -354,6 +387,10 @@
 		1ADD305E207C5B550039C1B5 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				1AF1EE2820AEB9B9006EF5BA /* AboutUsViewController.h */,
+				1AF1EE2720AEB9B8006EF5BA /* AboutUsViewController.m */,
+				1AF1EE0B20AE8567006EF5BA /* UserBasicSetViewController.h */,
+				1AF1EE0A20AE8567006EF5BA /* UserBasicSetViewController.m */,
 				1A72A8AE2047A4DE0091F460 /* SecondViewController.h */,
 				1A72A8AF2047A4DE0091F460 /* SecondViewController.m */,
 				1A1E75D0208D7C83006B8A19 /* SettingViewController.h */,
@@ -413,6 +450,41 @@
 				1AF1EE0820AE6C77006EF5BA /* DuSerInfoOneCell.m */,
 			);
 			name = View;
+			sourceTree = "<group>";
+		};
+		1AF1EE0D20AE86E3006EF5BA /* IQActionView */ = {
+			isa = PBXGroup;
+			children = (
+				1AF1EE0E20AE86E3006EF5BA /* IQActionPickerViewOffice.h */,
+				1AF1EE0F20AE86E3006EF5BA /* IQActionPickerViewOffice.m */,
+				1AF1EE1020AE86E3006EF5BA /* IQActionView.h */,
+				1AF1EE1120AE86E3006EF5BA /* IQActionView.m */,
+			);
+			path = IQActionView;
+			sourceTree = "<group>";
+		};
+		1AF1EE1420AE9DAA006EF5BA /* ChoseCity */ = {
+			isa = PBXGroup;
+			children = (
+				1AF1EE1520AE9DAA006EF5BA /* AWCollectionViewCell.h */,
+				1AF1EE1620AE9DAA006EF5BA /* AWCollectionViewCell.m */,
+				1AF1EE1720AE9DAA006EF5BA /* AWCollectionViewDialLayout.h */,
+				1AF1EE1820AE9DAA006EF5BA /* AWCollectionViewDialLayout.m */,
+				1AF1EE1920AE9DAA006EF5BA /* ComChoseHospitalViewController.h */,
+				1AF1EE1A20AE9DAA006EF5BA /* ComChoseHospitalViewController.m */,
+				1AF1EE1B20AE9DAA006EF5BA /* CommonChoseCityPickerView.h */,
+				1AF1EE1C20AE9DAA006EF5BA /* CommonChoseCityPickerView.m */,
+			);
+			path = ChoseCity;
+			sourceTree = "<group>";
+		};
+		1AF1EE2120AE9E7E006EF5BA /* AreaObj */ = {
+			isa = PBXGroup;
+			children = (
+				1AF1EE2220AE9E7E006EF5BA /* AreaManager.h */,
+				1AF1EE2320AE9E7E006EF5BA /* AreaManager.m */,
+			);
+			path = AreaObj;
 			sourceTree = "<group>";
 		};
 		6776CA3B317D732B1F502A75 /* Frameworks */ = {
@@ -493,6 +565,7 @@
 				1A72A8B82047A4DE0091F460 /* LaunchScreen.storyboard in Resources */,
 				1A72A8B52047A4DE0091F460 /* Assets.xcassets in Resources */,
 				1A7C117B20A5839D009108BD /* GroupMeetAlertView.xib in Resources */,
+				1AF1EE2620AEA5B8006EF5BA /* place.db in Resources */,
 				1A11371920AD774500ECDDCA /* CkeckQRCodeViewController.xib in Resources */,
 				1A72A8B32047A4DE0091F460 /* Main.storyboard in Resources */,
 				1AC5DE88207F331700DC9193 /* StartSB.storyboard in Resources */,
@@ -573,25 +646,34 @@
 				1A4BEB1520A92A3500D3BF78 /* NSDictionary+Accessors.m in Sources */,
 				1A7C117320A57B31009108BD /* MesListViewController.m in Sources */,
 				1A0C27CC20858D640036C462 /* ZYHttpAPI.m in Sources */,
+				1AF1EE1D20AE9DAA006EF5BA /* AWCollectionViewCell.m in Sources */,
 				1A72A8B02047A4DE0091F460 /* SecondViewController.m in Sources */,
+				1AF1EE1320AE86E3006EF5BA /* IQActionView.m in Sources */,
 				1A0C27D2208592FA0036C462 /* UserProfileTable.m in Sources */,
 				1A11371820AD774500ECDDCA /* CkeckQRCodeViewController.m in Sources */,
+				1AF1EE1E20AE9DAA006EF5BA /* AWCollectionViewDialLayout.m in Sources */,
 				1A4BEB1B20A9652400D3BF78 /* SEUpDownAPI.m in Sources */,
+				1AF1EE1220AE86E3006EF5BA /* IQActionPickerViewOffice.m in Sources */,
 				1A72A8AA2047A4DE0091F460 /* AppDelegate.m in Sources */,
 				1A1E75D2208D7C83006B8A19 /* SettingViewController.m in Sources */,
+				1AF1EE2020AE9DAA006EF5BA /* CommonChoseCityPickerView.m in Sources */,
 				1A7C118020A5861E009108BD /* MesListObj.m in Sources */,
+				1AF1EE2420AE9E7E006EF5BA /* AreaManager.m in Sources */,
 				1AA433E920AAD5DC0090E65D /* ServiceListObj.m in Sources */,
 				1AA517AD20847A4000B1B5D3 /* UserProfile.m in Sources */,
 				1A1E75D5208D7ED1006B8A19 /* SettingTableViewCell.m in Sources */,
+				1AF1EE0C20AE8567006EF5BA /* UserBasicSetViewController.m in Sources */,
 				1A7C117C20A5839D009108BD /* GroupMeetAlertView.m in Sources */,
 				1AC5DE7E207EFECB00DC9193 /* DuDuSerInfoViewController.m in Sources */,
 				1AA517BF208498DD00B1B5D3 /* UIColor+APPColor.m in Sources */,
+				1AF1EE1F20AE9DAA006EF5BA /* ComChoseHospitalViewController.m in Sources */,
 				1AA517B320848C0C00B1B5D3 /* ZYDataBaseManager.m in Sources */,
 				1A72A8BB2047A4DE0091F460 /* main.m in Sources */,
 				1AA433E620AAD4990090E65D /* DiyMjRefresh.m in Sources */,
 				1A72A8AD2047A4DE0091F460 /* FirstViewController.m in Sources */,
 				1ADD306F207C9DF40039C1B5 /* FirstViewTableViewCell.m in Sources */,
 				1AA517B720848E0400B1B5D3 /* NSString+FilePath.m in Sources */,
+				1AF1EE2920AEB9B9006EF5BA /* AboutUsViewController.m in Sources */,
 				1AC5DE8B207F383500DC9193 /* SignViewController.m in Sources */,
 				1AF1EE0620AE6C68006EF5BA /* DuSerInfoTwoCell.m in Sources */,
 				1A0C27D5208593CB0036C462 /* NSObject+ObjectMap.m in Sources */,

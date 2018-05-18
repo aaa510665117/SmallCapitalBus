@@ -112,6 +112,9 @@
                     </view>
                     <extendedEdge key="edgesForExtendedLayout" bottom="YES"/>
                     <navigationItem key="navigationItem" title="我的" id="i9w-I5-YlH"/>
+                    <connections>
+                        <outlet property="myTableView" destination="0B8-26-KuM" id="kPj-nA-2SX"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="qj5-b8-raA" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>

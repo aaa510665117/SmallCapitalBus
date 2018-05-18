@@ -11,6 +11,7 @@
 
 @interface SecondViewController : UIViewController<UITableViewDelegate,UITableViewDataSource>
 
+@property (weak, nonatomic) IBOutlet UITableView *myTableView;
 
 @end
 
