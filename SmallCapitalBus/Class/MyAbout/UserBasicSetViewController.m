@@ -299,28 +299,24 @@
             [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             }]];
             [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            }]];
-            [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-                // 可以在这里对textfield进行定制，例如改变背景色
-                textField.text = _userProfile.name;
-
-                if ([ToolsFunction isOnlyChineseAndAbcAndNum:textField.text]) {
+                
+                if ([ToolsFunction isOnlyChineseAndAbcAndNum:alert.textFields.firstObject.text]) {
                     [ToolsFunction showPromptViewWithString:@"只含有汉字、数字和字母" background:nil timeDuration:2];
                     return ;
                 }
                 //判断文字长度
                 NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-                NSData* data = [textField.text dataUsingEncoding:enc];
+                NSData* data = [alert.textFields.firstObject.text dataUsingEncoding:enc];
                 if (data.length>24)
                 {
                     [ToolsFunction showPromptViewWithString:@"不能输入过多文字哦~" background:nil timeDuration:1];
-                    [textField resignFirstResponder];
+                    [alert.textFields.firstObject resignFirstResponder];
                     return ;
                 }
                 //success
-                if ([textField.text length])
+                if ([alert.textFields.firstObject.text length])
                 {
-                    _userProfile.name = textField.text;
+                    _userProfile.name = alert.textFields.firstObject.text;
                     NSIndexPath *indexPath_2=[NSIndexPath indexPathForRow:1 inSection:0];
                     [_myTableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath_2] withRowAnimation:UITableViewRowAnimationMiddle];
                     [_pubBtn setEnabled:YES];
@@ -330,6 +326,10 @@
                 {
                     [ToolsFunction showPromptViewWithString:@"请填写姓名" background:nil timeDuration:1];
                 }
+            }]];
+            [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                // 可以在这里对textfield进行定制，例如改变背景色
+                textField.text = _userProfile.name;
             }];
 
             //弹出提示框；
@@ -422,23 +422,20 @@
             [alert addAction:[UIAlertAction actionWithTitle:@"取消" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
             }]];
             [alert addAction:[UIAlertAction actionWithTitle:@"确定" style:UIAlertActionStyleDefault handler:^(UIAlertAction * _Nonnull action) {
-            }]];
-            [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
-                // 可以在这里对textfield进行定制，例如改变背景色
-                textField.text = _userProfile.live_place;
+                
                 //判断文字长度
                 NSStringEncoding enc = CFStringConvertEncodingToNSStringEncoding(kCFStringEncodingGB_18030_2000);
-                NSData* data = [textField.text dataUsingEncoding:enc];
+                NSData* data = [alert.textFields.firstObject.text dataUsingEncoding:enc];
                 if (data.length>24)
                 {
                     [ToolsFunction showPromptViewWithString:@"不能输入过多文字哦~" background:nil timeDuration:1];
-                    [textField resignFirstResponder];
+                    [alert.textFields.firstObject resignFirstResponder];
                     return ;
                 }
                 //success
-                if ([textField.text length])
+                if ([alert.textFields.firstObject.text length])
                 {
-                    _userProfile.live_place = textField.text;
+                    _userProfile.live_place = alert.textFields.firstObject.text;
                     NSIndexPath *indexPath_7=[NSIndexPath indexPathForRow:6 inSection:0];
                     [_myTableView reloadRowsAtIndexPaths:[NSArray arrayWithObject:indexPath_7] withRowAnimation:UITableViewRowAnimationMiddle];
                     [_pubBtn setEnabled:YES];
@@ -448,6 +445,11 @@
                 {
                     [ToolsFunction showPromptViewWithString:@"请填写详细地址" background:nil timeDuration:1];
                 }
+                
+            }]];
+            [alert addTextFieldWithConfigurationHandler:^(UITextField *textField) {
+                // 可以在这里对textfield进行定制，例如改变背景色
+                textField.text = _userProfile.live_place;
             }];
             
             //弹出提示框；
