@@ -7,7 +7,10 @@
 //  督督列表详情
 
 #import <UIKit/UIKit.h>
+#import "ServiceListObj.h"
 
 @interface DuDuSerInfoViewController : UIViewController
+
+@property(nonatomic, strong)ServiceListObj * serInfo;
 
 @end

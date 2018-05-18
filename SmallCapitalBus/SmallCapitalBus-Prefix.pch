@@ -19,6 +19,7 @@
 #import <Masonry/Masonry.h>
 #import "TMCache.h"
 #import "DiyMjRefresh.h"
+#import "UIImageView+WebCache.h"
 
 #import "NSString+FilePath.h"
 #import "UIColor+APPColor.h"

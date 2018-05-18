@@ -45,6 +45,8 @@
 		1AC5DE8B207F383500DC9193 /* SignViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AC5DE8A207F383500DC9193 /* SignViewController.m */; };
 		1ADD3069207C61BD0039C1B5 /* SecondViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD3068207C61BD0039C1B5 /* SecondViewTableViewCell.m */; };
 		1ADD306F207C9DF40039C1B5 /* FirstViewTableViewCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1ADD306E207C9DF40039C1B5 /* FirstViewTableViewCell.m */; };
+		1AF1EE0620AE6C68006EF5BA /* DuSerInfoTwoCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE0520AE6C68006EF5BA /* DuSerInfoTwoCell.m */; };
+		1AF1EE0920AE6C77006EF5BA /* DuSerInfoOneCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 1AF1EE0820AE6C77006EF5BA /* DuSerInfoOneCell.m */; };
 		5726E56C4B0BEA5C72AD0CE0 /* libPods-SmallCapitalBus.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 558C8ED3DF9DC7884BB693AE /* libPods-SmallCapitalBus.a */; };
 /* End PBXBuildFile section */
 
@@ -122,6 +124,10 @@
 		1ADD3068207C61BD0039C1B5 /* SecondViewTableViewCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = SecondViewTableViewCell.m; sourceTree = "<group>"; };
 		1ADD306D207C9DF40039C1B5 /* FirstViewTableViewCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = FirstViewTableViewCell.h; sourceTree = "<group>"; };
 		1ADD306E207C9DF40039C1B5 /* FirstViewTableViewCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = FirstViewTableViewCell.m; sourceTree = "<group>"; };
+		1AF1EE0420AE6C68006EF5BA /* DuSerInfoTwoCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuSerInfoTwoCell.h; sourceTree = "<group>"; };
+		1AF1EE0520AE6C68006EF5BA /* DuSerInfoTwoCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuSerInfoTwoCell.m; sourceTree = "<group>"; };
+		1AF1EE0720AE6C77006EF5BA /* DuSerInfoOneCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DuSerInfoOneCell.h; sourceTree = "<group>"; };
+		1AF1EE0820AE6C77006EF5BA /* DuSerInfoOneCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DuSerInfoOneCell.m; sourceTree = "<group>"; };
 		25324FD2C3B78F3AF0B80119 /* Pods-SmallCapitalBus.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmallCapitalBus.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SmallCapitalBus/Pods-SmallCapitalBus.debug.xcconfig"; sourceTree = "<group>"; };
 		558C8ED3DF9DC7884BB693AE /* libPods-SmallCapitalBus.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SmallCapitalBus.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		AC06030D21CC4058DEA280A4 /* Pods-SmallCapitalBus.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SmallCapitalBus.release.xcconfig"; path = "Pods/Target Support Files/Pods-SmallCapitalBus/Pods-SmallCapitalBus.release.xcconfig"; sourceTree = "<group>"; };
@@ -401,6 +407,10 @@
 				1ADD306E207C9DF40039C1B5 /* FirstViewTableViewCell.m */,
 				1A7C117420A57F2A009108BD /* MesListTableViewCell.h */,
 				1A7C117520A57F2A009108BD /* MesListTableViewCell.m */,
+				1AF1EE0420AE6C68006EF5BA /* DuSerInfoTwoCell.h */,
+				1AF1EE0520AE6C68006EF5BA /* DuSerInfoTwoCell.m */,
+				1AF1EE0720AE6C77006EF5BA /* DuSerInfoOneCell.h */,
+				1AF1EE0820AE6C77006EF5BA /* DuSerInfoOneCell.m */,
 			);
 			name = View;
 			sourceTree = "<group>";
@@ -583,7 +593,9 @@
 				1ADD306F207C9DF40039C1B5 /* FirstViewTableViewCell.m in Sources */,
 				1AA517B720848E0400B1B5D3 /* NSString+FilePath.m in Sources */,
 				1AC5DE8B207F383500DC9193 /* SignViewController.m in Sources */,
+				1AF1EE0620AE6C68006EF5BA /* DuSerInfoTwoCell.m in Sources */,
 				1A0C27D5208593CB0036C462 /* NSObject+ObjectMap.m in Sources */,
+				1AF1EE0920AE6C77006EF5BA /* DuSerInfoOneCell.m in Sources */,
 				1A4BEB1820A964B800D3BF78 /* UIImageView+Avatar.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

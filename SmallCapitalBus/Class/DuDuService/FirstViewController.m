@@ -105,10 +105,23 @@
                 ServiceListObj *groupMode = [[ServiceListObj alloc]init];
                 groupMode.order_id = [obj ac_stringForKey:@"order_id"];
                 groupMode.created_at = [obj ac_stringForKey:@"created_at"];
+                groupMode.actual_start_time = [obj ac_stringForKey:@"actual_start_time"];
+                if(groupMode.actual_start_time == nil)
+                {
+                    groupMode.actual_start_time = @"--";
+                }
+                groupMode.logo = [obj ac_stringForKey:@"logo"];
                 groupMode.order_status = [obj ac_stringForKey:@"order_status"];
                 groupMode.user_name = [obj ac_stringForKey:@"user_name"];
+                groupMode.store_name = [obj ac_stringForKey:@"store_name"];
                 groupMode.thumbnail_image_url = [obj ac_stringForKey:@"thumbnail_image_url"];
+                groupMode.phone = [obj ac_stringForKey:@"phone"];
                 groupMode.price = [obj ac_stringForKey:@"price"];
+                groupMode.payed_amount = [obj ac_stringForKey:@"payed_amount"];
+                if(groupMode.payed_amount == nil)
+                {
+                    groupMode.payed_amount = @"--";
+                }
                 groupMode.address = [obj ac_stringForKey:@"address"];
                 [temp addObject:groupMode];
             }];
@@ -212,8 +225,10 @@
 -(void)tableView:(UITableView *)tableView didSelectRowAtIndexPath:(NSIndexPath *)indexPath
 {
     [tableView deselectRowAtIndexPath:indexPath animated:YES];
+    ServiceListObj * serviceObj = [_showDataArray objectAtIndex:indexPath.row];
     DuDuSerInfoViewController * duduSerInfo = [[DuDuSerInfoViewController alloc]init];
     duduSerInfo.hidesBottomBarWhenPushed = YES;
+    duduSerInfo.serInfo = serviceObj;
     [self.navigationController pushViewController:duduSerInfo animated:YES];
 }
 

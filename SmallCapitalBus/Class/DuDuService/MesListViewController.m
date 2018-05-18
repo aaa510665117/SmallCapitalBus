@@ -76,7 +76,7 @@
                 rankGood.user_id = [dic ac_stringForKey:@"user_id"];
                 rankGood.user_name = [dic ac_stringForKey:@"user_name"];
                 rankGood.uuid = [dic ac_stringForKey:@"uuid"];
-
+                
                 [temp addObject:rankGood];
             }];
             weakSelf.showDataArray = temp;
